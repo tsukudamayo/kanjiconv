@@ -1,0 +1,262 @@
+{
+    "recipeId": "null",
+    "title": "かぶのそぼろ煮",
+    "kana": "カブノソボロニ",
+    "subTitle": "",
+    "description": "",
+    "dishType": "",
+    "cookingMethod": [],
+    "recipeGenre": "",
+    "foodType": "",
+    "video": "",
+    "defaultServing": {},
+    "recipeSeason": {},
+    "notes": "",
+    "images": {
+        "main": ""
+    },
+    "introductoryEssay": "",
+    "outOfSeasonFlag": 0,
+    "content": {
+        "dishServings": {
+            "unit": {
+                "4": "人分"
+            },
+            "dishes": {
+                "title": "かぶのそぼろ煮",
+                "cookingTool": "",
+                "nutrition": {
+                    "note": "",
+                    "salt": 0.0,
+                    "protein": 0.0,
+                    "calories": 0,
+                    "lipid": 0.0,
+                    "carbohydrate": 0.0
+                },
+                "ingredients": [
+                    {
+                        "description": "かぶ",
+                        "quantityText": "中８個（７００ｇ）",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0
+                    },
+                    {
+                        "description": "Ａ",
+                        "quantityText": {
+                            "だし": "カップ１"
+                        },
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0
+                    },
+                    {
+                        "description": "Ａ",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "Ａ",
+                                "quantityText": {
+                                    "砂糖": "小さじ１と１／２"
+                                },
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ａ",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "Ａ",
+                                "quantityText": {
+                                    "しょうゆ": "大さじ２"
+                                },
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "とりひき肉",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "とりひき肉",
+                                "quantityText": "１５０ｇ",
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ｂ",
+                        "quantityText": {
+                            "酒": "大さじ１"
+                        },
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0
+                    },
+                    {
+                        "description": "Ｂ",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "Ｂ",
+                                "quantityText": {
+                                    "しょうゆ": "大さじ１"
+                                },
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ｂ",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "Ｂ",
+                                "quantityText": {
+                                    "砂糖": "小さじ１"
+                                },
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Ｂ",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "Ｂ",
+                                "quantityText": {
+                                    "しょうが汁": "小さじ１"
+                                },
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "しょうが",
+                        "quantityText": "",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0,
+                        "items": [
+                            {
+                                "description": "しょうが",
+                                "quantityText": "１かけ",
+                                "ingredientId": 0,
+                                "classificationId": 0,
+                                "intermediateId": 0
+                            }
+                        ]
+                    },
+                    {
+                        "description": "かたくり粉",
+                        "quantityText": "大さじ１／２",
+                        "ingredientId": 0,
+                        "classificationId": 0,
+                        "intermediateId": 0
+                    }
+                ]
+            }
+        },
+        "instructionServings": {
+            "unit": {
+                "4": "人分"
+            },
+            "instructions": [
+                {
+                    "step": 1,
+                    "description": "かぶは皮をむき、４～６つに切ります。",
+                    "classification": "",
+                    "note": "",
+                    "images": {
+                        "main": ""
+                    },
+                    "video": ""
+                },
+                {
+                    "step": 2,
+                    "description": "鍋にＡとかぶを入れ、落としぶたをして、やわらかくなるまで、弱火で煮ます。",
+                    "classification": "",
+                    "note": "",
+                    "images": {
+                        "main": ""
+                    },
+                    "video": ""
+                },
+                {
+                    "step": 3,
+                    "description": "かたくり粉を水大さじ１でといておきます。",
+                    "classification": "",
+                    "note": "",
+                    "images": {
+                        "main": ""
+                    },
+                    "video": ""
+                },
+                {
+                    "step": 4,
+                    "description": "しょうがは皮をむき、薄く切って細いせん切りにして水にさらします（針しょうが）。",
+                    "classification": "",
+                    "note": "",
+                    "images": {
+                        "main": ""
+                    },
+                    "video": ""
+                },
+                {
+                    "step": 5,
+                    "description": "（２）の火を止めてかぶをとり出し、煮汁に、ひき肉とＢを入れて肉をよくほぐし、弱火にかけます。",
+                    "classification": "",
+                    "note": "",
+                    "images": {
+                        "main": ""
+                    },
+                    "video": ""
+                },
+                {
+                    "step": 6,
+                    "description": "肉に火が通ったら、（３）でとろみをつけ、かぶをもどします。かぶが温まったら、器にとります。（５）のそぼろあんをかけ、針しょうがを上に飾ります。",
+                    "classification": "",
+                    "note": "",
+                    "images": {
+                        "main": ""
+                    },
+                    "video": ""
+                }
+            ]
+        }
+    }
+}

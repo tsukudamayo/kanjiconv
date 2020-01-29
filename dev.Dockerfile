@@ -15,7 +15,8 @@ RUN apt-get update \
     && tar xvf cmake-3.16.1.tar.gz \
     && rm cmake-3.16.1.tar.gz
 
-RUN wget http://www.phontron.com/kytea/download/kytea-0.4.7.tar.gz \
+RUN pip install -r requirements.txt \
+    && wget http://www.phontron.com/kytea/download/kytea-0.4.7.tar.gz \
     && tar xzf kytea-0.4.7.tar.gz
 
 WORKDIR /kytea/app/cmake-3.16.1
