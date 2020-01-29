@@ -118,15 +118,21 @@ class JsonBuilder:
         self.filepath = filepath
         self._ingredients_state = 1
         self._item_state = ''
-        self.temp_keyword = ''
+        self.tmp_keyword = ''
         self.ingredients = {
                 "description": "",
                 "quantityText": "",
                 "ingredientId": 0,
                 "classificationId": 0,
                 "intermediateId": 0,
+                "items": [],
+        }
+        self.nest_ingredients = {
                 "description": "",
                 "quantityText": "",
+                "ingredientId": 0,
+                "classificationId": 0,
+                "intermediateId": 0,
                 "ingredientId": 0,
                 "classificationId": 0,
                 "intermediateId": 0,
@@ -163,8 +169,17 @@ class JsonBuilder:
                 "intermediateId": 0,
                 "items": [],
             }
+            nest_ingredients = {
+                "description": "",
+                "quantityText": "",
+                "ingredientId": 0,
+                "classificationId": 0,
+                "intermediateId": 0,
+                "ingredientId": 0,
+                "classificationId": 0,
+                "intermediateId": 0,
+            }
         else:
-
             self.ingredients = {
                 "description": "",
                 "quantityText": "",
@@ -175,6 +190,7 @@ class JsonBuilder:
                 "classificationId": 0,
                 "intermediateId": 0,
             }
+        print(self.ingredients)
 
     def build(self):
         self.load_json()
@@ -247,30 +263,33 @@ class JsonBuilder:
         return
 
     def inject_ingredient(self, dic: dict) -> dict:
-        state = self._ingredients_state
 
+        print('inject_ingredient/dic', dic)
         for key, value in dic.items():
+
             if isinstance(value, dict):
                 self.ingredients_state = 0
             else:
                 self.ingredients_state = 1
-
+            
             print('ingredients_state')
-            print(self.ingredients_state)
-            self.item_state = key
-                
-            if state == 0:
-                # ingredients = {
-                #     "description": "",
-                #     "quantityText": "",
-                #     "ingredientId": 0,
-                #     "classificationId": 0,
-                #     "intermediateId": 0,
-                #     "items": [],
-                # }
+            state = self._ingredients_state
+            print(state)
 
+            self.item_state = key
+
+            if state == 0:
+                ingredients = {
+                    "description": "",
+                    "quantityText": "",
+                    "ingredientId": 0,
+                    "classificationId": 0,
+                    "intermediateId": 0,
+                    "items": [],
+                }
+                
                 # ingredients["description"] = key
-                nest_ingredients = {
+                self.nest_ingredients = {
                     "description": "",
                     "quantityText": "",
                     "ingredientId": 0,
@@ -280,9 +299,21 @@ class JsonBuilder:
                     "classificationId": 0,
                     "intermediateId": 0,
                 }
-                nest_ingredients['description'] = key
-                nest_ingredients['quantityText'] = value
-                self.ingredients["items"].append(nest_ingredients)
+                
+                self.nest_ingredients['description'] = key
+                self.nest_ingredients['quantityText'] = value
+                self.ingredients["description"] = key
+                
+                print('inject_ingredient')
+                print(self.ingredients)
+                print('inject_ingredient')
+                print(self.nest_ingredients)
+                print('return')
+                print('****************')
+                print(self.ingredients)
+                print('****************')
+                self.tmp_keyword = key
+                self.ingredients["items"].append(self.nest_ingredients)
             
             elif state == 1:
                 self.ingredients = {
@@ -295,12 +326,17 @@ class JsonBuilder:
                     "classificationId": 0,
                     "intermediateId": 0,
                 }
-
+            
                 self.ingredients["description"] = key
                 self.ingredients["quantityText"] = value
-    
+                self.tmp_keyword = key
+
+        
+
+
         return self.ingredients
 
+    
     def build_ingredients(self):
         """ ingredients """
         ingredients = self.data['ingredients']
@@ -313,14 +349,24 @@ class JsonBuilder:
         
         print('fetch_nest_dict')
         print(list(fetch_nest_dict(ingredients)))
-        ingredients_list = [self.inject_ingredient(f) for f in list(fetch_nest_dict(ingredients))]
+        ingredients_list = []
+        # ingredients_list = [self.inject_ingredient(f) for f in list(fetch_nest_dict(ingredients))]
+        for f in list(fetch_nest_dict(ingredients)):
+            print('f')
+            print(f)
+            result = self.inject_ingredient(f)
+            print('result')
+            print(result)
+            ingredients_list.append(result)
+        print('ingredients_list')
+        print(ingredients_list)
         self.config['content']['dishServings']['dishes']['ingredients']= ingredients_list
 
         return
 
 
 def main():
-    filepath = os.path.join('data/betterhome_recipe', '10100003.json')
+    filepath = os.path.join('data/betterhome_recipe', '10100005.json')
     builder = JsonBuilder(config, filepath)
     result = builder.build()
 
