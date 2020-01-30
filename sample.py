@@ -3,7 +3,7 @@ import re
 import json
 import subprocess
 from functools import reduce
-from typing import Iterator
+from typing import Iterator, Dict, Any
 import jaconv
 from collections import OrderedDict
 
@@ -60,13 +60,13 @@ config = {
 }
 
 
-def fetch_subdict(key: str, dic: dict) -> Iterator[str]:
+def fetch_subdict(key: str, dic: dict) -> Iterator[Dict[str, Dict[Any, Any]]]:
     for _key, _value in dic.items():
         if isinstance(_value, dict):
             yield from fetch_subdict(key, _value)
         yield {key: {_key: _value}}
 
-def fetch_nest_dict(dic: dict) -> Iterator[str]:
+def fetch_nest_dict(dic: dict) -> Iterator[Dict[Any, Any]]:
     for key, value in dic.items():
         if isinstance(value, dict):
             yield from fetch_subdict(key, value)
