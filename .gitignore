@@ -2,3 +2,4 @@ data/
 data.zip
 dotfiles/
 kytea*
+__pycache__/

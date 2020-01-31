@@ -2,6 +2,11 @@ import json
 from typing import Dict, List
 from collections import OrderedDict
 
+from operation import normalize_quantity
+from operation import multiply_quantity
+from operation import build_mulitply_quantities
+from operation import convert_kana
+
 
 def load_json(filepath: str) -> Dict:
     with open(filepath, 'r', encoding='utf-8') as r:
@@ -15,7 +20,7 @@ def fetch_unit(data: Dict) -> str:
     return data['ingredients']['食材']
 
 
-class BuildDish:
+class Dish:
 
     def __init__(self, data):
         self.data = data
@@ -66,7 +71,7 @@ class BuildDish:
         return [generate_ordered_params(k, v) for k, v in ingredients.items()]
 
 
-class BuildInstruction:
+class Instruction:
 
     def __init__(self, data):
         self.data = data
@@ -85,15 +90,96 @@ class BuildInstruction:
 def main():
     test_data = './test_data/10100006.json'
     data = load_json(test_data)
-    dish_builder = BuildDish(data)
+    dish_builder = Dish(data)
     dish = dish_builder.build()
+    dish4 = dish
+    # ------------- #
+    # dish_servings #
+    # ------------- #
+    dish_servings = OrderedDict()
+    dish_servings['4人前'] = dish
+
+    test_data = './test_data/10100006.json'
+    data = load_json(test_data)
+    dish_builder = Dish(data)
+    dish = dish_builder.build()
+    norm = normalize_quantity(dish, 4)
+    params = multiply_quantity(dish, norm, 2)
+    dish2_ing = build_mulitply_quantities(dish, params)
+    print('dish2_ing')
+    print(dish2_ing)
+
     print('dish')
     print(dish)
+    with open('dish4_config.json', 'w', encoding='utf-8') as w:
+        json.dump(dish4, w, indent=4, ensure_ascii=False)
 
-    instruction_builder = BuildInstruction(data)
+    with open('dish2_config.json', 'w', encoding='utf-8') as ww:
+        json.dump(dish2_ing, ww, indent=4, ensure_ascii=False)
+
+    # ------------- #
+    # dish_servings #
+    # ------------- #
+    cookingtool = ""
+    nutrition  = [
+                  {"note":  ""},
+                  {"salt": 0.0},
+                  {"protein": 0.0},
+                  {"calory": 15},
+                  {"lipid": 0.0},
+                  {"carbohydrate": 0.0},
+                 ]
+    dish2 = {
+        "title": data['title'],
+        "cookingTool": '',
+        "nutrition": nutrition,
+        "ingredients": dish2_ing
+    }
+        
+    dish_servings['2人前'] = dish2
+
+    with open('dishSerivngs.json', 'w', encoding='utf-8') as d:
+        json.dump(dish_servings, d, indent=4, ensure_ascii=False)
+    
+
+    instruction_builder = Instruction(data)
     instruction = instruction_builder.build()
     print('instruction')
     print(instruction)
+
+    # -------------------- #
+    # instruction_servings #
+    # -------------------- #
+    instruction_servings = OrderedDict()
+    instruction_servings['2人前'] = instruction
+    instruction_servings['4人前'] = instruction
+
+    # content
+    content = OrderedDict()
+    content["dishSerivings"] = dish_servings
+    content["instructionServings"] = instruction_servings
+
+    # toplevel
+    toplevel = OrderedDict()
+    toplevel['recipeId'] = 'null'
+    toplevel['title'] = data['title']
+    toplevel['kana'] = convert_kana(data['title'])
+    toplevel['subTitle'] = ''
+    toplevel['description'] = ''
+    toplevel['dishType'] = '主菜・主食'
+    toplevel['cookingMethod'] = ''
+    toplevel['recipeGenre'] = ''
+    toplevel['video'] = ''
+    toplevel['defaultServing'] = '4人前'
+    toplevel['recipeSeason'] = ''
+    toplevel['notes'] = ''
+    toplevel['images'] = ''
+    toplevel['introductoryEssay'] = ''
+    toplevel['description'] = ''
+    toplevel['content'] = content
+
+    with open('recipes.json', 'w', encoding='utf-8') as w:
+        json.dump(toplevel, w, indent=4, ensure_ascii=False)
 
 
 if __name__ == '__main__':

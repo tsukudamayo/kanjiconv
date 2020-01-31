@@ -1,11 +1,14 @@
 import json
 from collections import OrderedDict
+from preprocess_web_recipe import Dish
+from preprocess_web_recipe import Instruction
 from preprocess_web_recipe import load_json
-from preprocess_web_recipe import fetch_ingredients
-from preprocess_web_recipe import fetch_instruction
-from preprocess_web_recipe import fetch_title
-from preprocess_web_recipe import build_dishes
-from preprocess_web_recipe import fetch_unit
+
+# from preprocess_web_recipe import fetch_ingredients
+# from preprocess_web_recipe import fetch_instruction
+# from preprocess_web_recipe import fetch_title
+# from preprocess_web_recipe import build_dishes
+# from preprocess_web_recipe import fetch_unit
 
 
 def test_load_json():
@@ -64,7 +67,9 @@ def test_fetch_ingredients():
     ]
     test_data = './test_data/10100006.json'
     data = load_json(test_data)
-    result = fetch_ingredients(data)
+    dish = Dish(data)
+    # instance = dish.build()
+    result = dish.fetch_ingredients(data)
 
     assert result == expected
 
@@ -101,7 +106,7 @@ def test_fetch_instruction():
     
     test_data = './test_data/10100006.json'
     data = load_json(test_data)
-    result = fetch_instruction(data)
+    result = Instruction.fetch_instruction(data)
 
     assert result == expected
 
@@ -110,7 +115,7 @@ def test_fetch_title():
     expected = "しゅんぎくと菊の花のおひたし"
     test_data = './test_data/10100006.json'
     data = load_json(test_data)
-    result = fetch_title(data)
+    result = Dish.fetch_title(data)
 
     assert result == expected
 
@@ -168,9 +173,9 @@ def test_build_dishes():
 
      test_data = './test_data/10100006.json'
      data = load_json(test_data)
-     title = fetch_title(data)
-     ingredients = fetch_ingredients(data)
-     result = build_dishes(title, ingredients)
+     title = Dish.fetch_title(data)
+     ingredients = Dish.fetch_ingredients(data)
+     result = Dish.build_dishes(title, ingredients)
 
      assert result == expected
 
@@ -180,6 +185,6 @@ def test_fetch_units():
 
     test_data = './test_data/10100006.json'
     data = load_json(test_data)
-    result = fetch_unit(data)
+    result = Dish.fetch_unit(data)
 
     assert result == expected
