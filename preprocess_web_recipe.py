@@ -96,7 +96,9 @@ def main():
     # ------------- #
     # dish_servings #
     # ------------- #
-    dish_servings = OrderedDict()
+    dish_servings = []
+    dish_servings.append({"unit": 
+
     dish_servings['4人前'] = dish
 
     test_data = './test_data/10100006.json'
@@ -161,21 +163,12 @@ def main():
 
     # toplevel
     toplevel = OrderedDict()
-    toplevel['recipeId'] = 'null'
+    toplevel['recipeId'] = None
     toplevel['title'] = data['title']
     toplevel['kana'] = convert_kana(data['title'])
-    toplevel['subTitle'] = ''
     toplevel['description'] = ''
-    toplevel['dishType'] = '主菜・主食'
-    toplevel['cookingMethod'] = ''
-    toplevel['recipeGenre'] = ''
-    toplevel['video'] = ''
-    toplevel['defaultServing'] = '4人前'
-    toplevel['recipeSeason'] = ''
-    toplevel['notes'] = ''
-    toplevel['images'] = ''
-    toplevel['introductoryEssay'] = ''
-    toplevel['description'] = ''
+    toplevel['dishType'] = 'main'
+    toplevel['defaultServing'] = '4人'
     toplevel['content'] = content
 
     with open('recipes.json', 'w', encoding='utf-8') as w:
