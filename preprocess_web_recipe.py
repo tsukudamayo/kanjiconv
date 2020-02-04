@@ -97,9 +97,7 @@ def main():
     # dish_servings #
     # ------------- #
     dish_servings = []
-    dish_servings.append({"unit": 
-
-    dish_servings['4人前'] = dish
+    dish_servings.append({"unit": "4人"})
 
     test_data = './test_data/10100006.json'
     data = load_json(test_data)
@@ -108,11 +106,7 @@ def main():
     norm = normalize_quantity(dish, 4)
     params = multiply_quantity(dish, norm, 2)
     dish2_ing = build_mulitply_quantities(dish, params)
-    print('dish2_ing')
-    print(dish2_ing)
 
-    print('dish')
-    print(dish)
     with open('dish4_config.json', 'w', encoding='utf-8') as w:
         json.dump(dish4, w, indent=4, ensure_ascii=False)
 
@@ -153,8 +147,8 @@ def main():
     # instruction_servings #
     # -------------------- #
     instruction_servings = OrderedDict()
-    instruction_servings['2人前'] = instruction
-    instruction_servings['4人前'] = instruction
+    instruction_servings['2人'] = instruction
+    instruction_servings['4人'] = instruction
 
     # content
     content = OrderedDict()
@@ -173,6 +167,7 @@ def main():
 
     with open('recipes.json', 'w', encoding='utf-8') as w:
         json.dump(toplevel, w, indent=4, ensure_ascii=False)
+
 
 
 if __name__ == '__main__':

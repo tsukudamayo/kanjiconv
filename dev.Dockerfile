@@ -3,17 +3,22 @@ FROM python:3.6.9-buster
 RUN mkdir -p /kytea/app
 WORKDIR /kytea/app
 COPY . .
+ENV ja_JP.UTF-8
+ENV LC_TYPE jp_JP.UTF-8
 RUN apt-get update \
     && apt-get -y install emacs \
     llvm \
     clang \
     libclang-dev \
+    locales \
     && git clone https://github.com/tsukudamayo/dotfiles.git \
     && cp -r ./dotfiles/linux/.emacs.d ~/ \
     && cp -r ./dotfiles/.fonts ~/ \
     && wget https://github.com/Kitware/CMake/releases/download/v3.16.1/cmake-3.16.1.tar.gz \ 
     && tar xvf cmake-3.16.1.tar.gz \
-    && rm cmake-3.16.1.tar.gz
+    && rm cmake-3.16.1.tar.gz \
+    && locale-gen jp_JP.UTF8 \
+    && localedef -f UTF-8 -i ja_JP ja_JP.utf8
 
 RUN pip install -r requirements.txt \
     && wget http://www.phontron.com/kytea/download/kytea-0.4.7.tar.gz \
