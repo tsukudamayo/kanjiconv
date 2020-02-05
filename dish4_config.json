@@ -1,61 +1,26 @@
 {
-    "title": "しゅんぎくと菊の花のおひたし",
+    "title": "うずら豆の甘煮",
     "cookingTool": "",
-    "nutrition": [
-        {
-            "note": ""
-        },
-        {
-            "salt": 0.0
-        },
-        {
-            "protein": 0.0
-        },
-        {
-            "calory": 15
-        },
-        {
-            "lipid": 0.0
-        },
-        {
-            "carbohydrate": 0.0
-        }
-    ],
+    "nutrition": {
+        "note": "",
+        "salt": 0,
+        "protein": 0,
+        "calory": "266kcal",
+        "lipid": 0,
+        "carbohydrate": 0
+    },
     "ingredients": [
         {
-            "description": "しゅんぎく",
-            "quantityText": "２００ｇ",
-            "ingredientId": 0,
-            "classificationId": 0,
-            "intermediateId": 0
+            "description": "うずら豆",
+            "quantityText": "カップ２（３００ｇ）"
         },
         {
-            "description": "菊の花（食用）",
-            "quantityText": "５０ｇ",
-            "ingredientId": 0,
-            "classificationId": 0,
-            "intermediateId": 0
+            "description": "砂糖",
+            "quantityText": "９０ｇ"
         },
         {
-            "description": "酢",
-            "quantityText": "大さじ１",
-            "ingredientId": 0,
-            "classificationId": 0,
-            "intermediateId": 0
-        },
-        {
-            "description": "しょうゆ",
-            "quantityText": "大さじ１／２",
-            "ingredientId": 0,
-            "classificationId": 0,
-            "intermediateId": 0
-        },
-        {
-            "description": "だし",
-            "quantityText": "大さじ１",
-            "ingredientId": 0,
-            "classificationId": 0,
-            "intermediateId": 0
+            "description": "塩",
+            "quantityText": "小さじ１／５"
         }
     ]
 }

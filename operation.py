@@ -1,5 +1,6 @@
 import re
 import subprocess
+import itertools
 from typing import Dict, List, Any
 from fractions import Fraction
 
@@ -11,24 +12,73 @@ _KNM_MODEL = 'kytea-0.4.7/RecipeNE-sample/recipe416.knm'
 _KYTEA_PATH = 'kytea'
 
 
+# ---------------- #
+# parse ingredints #
+# ---------------- #
+def parse_ingredients(data: Dict) -> List:
+    key_value_list = [{k: v} for k, v in data.items()]
+    generator = [list(divide_key_value(d)) for d in key_value_list]
+    
+    return list(itertools.chain.from_iterable(generator))
+
+
+def divide_key_value(dic: Dict) -> Dict:
+    for k, v in dic.items():
+        if isinstance(v, dict):
+            items = generator_to_dict(v)
+            yield {'description': k, 'quantityText': None}
+            yield items
+        else:
+            yield {'description': k, 'quantityText': v}
+
+
+def generator_to_dict(dic: Dict) -> Dict:
+    return {"items": list(divide_key_value(dic))}
+
+
 # --------- #
 # normalize #
 # --------- #
 # TODO pytest
 def normalize_quantity(data: List, divison: Any) -> List:
+    print('data')
+    print(data)
+    print('normalize_quantity')
     ingredients = data['ingredients']
-    hankaku_ingredients = [dict_to_hankaku(i) for i in ingredients]
-    quantity_text = [i['quantityText'] for i in hankaku_ingredients]
+    print('ingredients')
+    print(ingredients)
+    hankaku_ingredients = [list(dict_to_hankaku(i)) for i in ingredients]
+    hankaku_ingredients = list(itertools.chain.from_iterable(hankaku_ingredients))
+    print('hankaku_ingredients')
+    print(hankaku_ingredients)
+    quantity_text = [list(aggregate_quantities(i)) for i in hankaku_ingredients]
+    quantity_text = list(itertools.chain.from_iterable(quantity_text))
+    print('quantitiy_text')
+    print(quantity_text)
     candidate_borders = [candidate_border(q) for q in quantity_text]
-    separate_quantities = [separate_quantity(q, b) for q, b in zip(quantity_text, candidate_borders)]
+    print('candidate_borders')
+    print(candidate_borders)
+    separate_quantities = [list(separate_quantity(q, b)) for q, b in zip(quantity_text, candidate_borders)]
+    print('separate_quantities')
+    print(separate_quantities)
     quantity_types = [[define_input_type(w) for w in s] for s in separate_quantities]
+    print('quantity_types')
+    print(quantity_types)
+    print('separate_quantities')
+    print(separate_quantities)
     norm_quantities = [[operation_by_type(t, w, divison) for t, w in zip(types, words)]
                        for types, words in zip(quantity_types, separate_quantities)]
+
+    print('norm_quantities')
+    print(norm_quantities)
     
     return norm_quantities
 
 
 def operation_by_type(type: str, strings: str, division: Any) -> Any:
+    if strings == '':
+        strings = '0'
+    print(type, strings)
     if type == 'real':
         return float(strings) / division
     elif type == 'fraction':
@@ -38,7 +88,10 @@ def operation_by_type(type: str, strings: str, division: Any) -> Any:
 
     
 def define_input_type(strings: str) -> str:
-    if strings.isalpha():
+    print(strings)
+    pattern = re.compile('[()]')
+    match = re.search(pattern, strings)
+    if strings.isalpha() or match:
         return 'strings'
     else:
         if strings.find('/') >= 0:
@@ -47,27 +100,84 @@ def define_input_type(strings: str) -> str:
             return 'real'
 
 
-
 def separate_quantity(strings: str, border: int) -> List:
+    print('separate_quantity/strings')
+    print(strings, border)
     first = strings[:border]
+    yield first
     second = strings[border:]
-
-    return [first, second]
+    print('second: ', second)
+    has_candidate = candidate_border(second)
+    print('has_candidate : ', has_candidate)
+    if has_candidate:
+        yield from separate_quantity(second, has_candidate)
+    else:
+        yield second
     
 
 def candidate_border(strings: str) -> int:
-    flg = strings[0].isdecimal()
-    for idx, t in enumerate(strings):
-        border = idx
-        tmp_flg = strings[idx].isdecimal()
-        if flg != tmp_flg:
-            break
+    print('strings')
+    print(strings)
 
-    return border
+    if strings == '':
+        return False
+    else:
+        fraction_pattern = re.compile('[0-9]{1,}/[0-9]{1,}')  # Fractions are treated as exceptions.
+        match = re.match(fraction_pattern, strings)
+        flg = strings[0].isdecimal()
+        tmp_flg = strings[0].isdecimal()
+        change_flg = False
+
+        for idx, t in enumerate(strings):
+            print('t : ', t)
+            border = idx
+            tmp_flg = strings[idx].isdecimal()
+            print('flg : tmp_flg', flg, tmp_flg)
+            print('flg != tmp_flg: ', flg != tmp_flg)
+            if match:
+                continue
+            if flg != tmp_flg:
+                change_flg = True
+                print('change')
+                return border
+                break
+
+        if change_flg is True:
+            print('change_flg is True')
+            return border
+        else:
+            print('change_flg is False')
+            return False
+
+
+def aggregate_quantities(dic: Dict) -> str:
+    print('dic')
+    print(dic)
+    if 'items' in dic.keys():
+        for d in dic['items']:
+            print('d')
+            print(d)
+            yield from aggregate_quantities(d)
+    else:
+        if dic['quantityText'] is None:
+            quantity_text = ''
+        else:
+            quantity_text = dic['quantityText']
+        yield quantity_text
 
 
 def dict_to_hankaku(zenkaku_dict: Dict) -> Dict:
-    return {k: value_to_hankaku(v) for k, v in zenkaku_dict.items()}
+    print('zenkaku_dict')
+    print(zenkaku_dict)
+    if isinstance(zenkaku_dict, dict):
+        if 'items' in zenkaku_dict.keys():
+            for d in zenkaku_dict['items']:
+                yield from dict_to_hankaku(zenkaku_dict['items'])
+        else:
+            yield {k: value_to_hankaku(v) for k, v in zenkaku_dict.items()}
+    elif isinstance(zenkaku_dict, list):
+        for d in zenkaku_dict:
+            yield from dict_to_hankaku(d)
 
 
 def value_to_hankaku(value: Any) -> Any:
@@ -106,7 +216,12 @@ def value_to_zenkaku(value: str) -> str:
 def multiply_quantity(data: List, params: List, multiplier: Any) -> List:
     ingredients = data['ingredients']
     hankaku_ingredients = [dict_to_hankaku(i) for i in ingredients]
-    quantity_text = [i['quantityText'] for i in hankaku_ingredients]
+    print('multiply_quantity/hankaku_ingredients', hankaku_ingredients)
+    quantity_text = [list(aggregate_quantities(i)) for i in hankaku_ingredients]
+    print('multiply_quantity/quantity_texst', quantity_text)
+    quantity_text = list(itertools.chain.from_iterable(quantity_text))
+    print('multiply_quantity/quantity_texst', quantity_text)
+    # quantity_text = [i['quantityText'] for i in hankaku_ingredients]
     candidate_borders = [candidate_border(q) for q in quantity_text]
     separate_quantities = [separate_quantity(q, b) for q, b in zip(quantity_text, candidate_borders)]
     quantity_types = [[define_input_type(w) for w in s] for s in separate_quantities]

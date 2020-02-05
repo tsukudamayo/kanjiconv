@@ -3,7 +3,7 @@ FROM python:3.6.9-buster
 RUN mkdir -p /kytea/app
 WORKDIR /kytea/app
 COPY . .
-ENV ja_JP.UTF-8
+ENV LANG ja_JP.UTF-8
 ENV LC_TYPE jp_JP.UTF-8
 RUN apt-get update \
     && apt-get -y install emacs \

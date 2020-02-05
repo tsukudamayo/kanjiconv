@@ -1,196 +1,127 @@
 {
-    "recipeId": "null",
-    "title": "しゅんぎくと菊の花のおひたし",
-    "kana": "シュンギクトギクノハナノオヒタシ",
-    "subTitle": "",
+    "recipeId": null,
+    "title": "うずら豆の甘煮",
+    "kana": "ウズラマメノアマニ",
     "description": "",
-    "dishType": "主菜・主食",
-    "cookingMethod": "",
-    "recipeGenre": "",
-    "video": "",
-    "defaultServing": "4人前",
-    "recipeSeason": "",
-    "notes": "",
-    "images": "",
+    "dishType": "main",
+    "defaultServing": "4人",
     "introductoryEssay": "",
-    "content": {
-        "dishSerivings": {
-            "4人前": {
-                "title": "しゅんぎくと菊の花のおひたし",
-                "cookingTool": "",
-                "nutrition": [
-                    {
-                        "note": ""
-                    },
-                    {
-                        "salt": 0.0
-                    },
-                    {
-                        "protein": 0.0
-                    },
-                    {
-                        "calory": 15
-                    },
-                    {
-                        "lipid": 0.0
-                    },
-                    {
-                        "carbohydrate": 0.0
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "うずら豆の甘煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "266kcal",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "うずら豆",
+                                "quantityText": "カップ１（１５０ｇ）"
+                            },
+                            {
+                                "description": "砂糖",
+                                "quantityText": "４５．０ｇ"
+                            },
+                            {
+                                "description": "塩",
+                                "quantityText": "小さじ１／１０"
+                            }
+                        ]
                     }
-                ],
-                "ingredients": [
-                    {
-                        "description": "しゅんぎく",
-                        "quantityText": "２００ｇ",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "菊の花（食用）",
-                        "quantityText": "５０ｇ",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "酢",
-                        "quantityText": "大さじ１",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "しょうゆ",
-                        "quantityText": "大さじ１／２",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "だし",
-                        "quantityText": "大さじ１",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "うずら豆の甘煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "266kcal",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "うずら豆",
+                                "quantityText": "カップ２（３００ｇ）"
+                            },
+                            {
+                                "description": "砂糖",
+                                "quantityText": "９０ｇ"
+                            },
+                            {
+                                "description": "塩",
+                                "quantityText": "小さじ１／５"
+                            }
+                        ]
                     }
-                ]
-            },
-            "2人前": {
-                "title": "しゅんぎくと菊の花のおひたし",
-                "cookingTool": "",
-                "nutrition": [
-                    {
-                        "note": ""
-                    },
-                    {
-                        "salt": 0.0
-                    },
-                    {
-                        "protein": 0.0
-                    },
-                    {
-                        "calory": 15
-                    },
-                    {
-                        "lipid": 0.0
-                    },
-                    {
-                        "carbohydrate": 0.0
-                    }
-                ],
-                "ingredients": [
-                    {
-                        "description": "しゅんぎく",
-                        "quantityText": "１００．０ｇ",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "菊の花（食用）",
-                        "quantityText": "２５．０ｇ",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "酢",
-                        "quantityText": "大さじ１／２",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "しょうゆ",
-                        "quantityText": "大さじ１／４",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    },
-                    {
-                        "description": "だし",
-                        "quantityText": "大さじ１／２",
-                        "ingredientId": 0,
-                        "classificationId": 0,
-                        "intermediateId": 0
-                    }
-                ]
-            }
-        },
-        "instructionServings": {
-            "2人前": [
-                {
-                    "steps": 1,
-                    "description": "しゅんぎくは、茎のかたいところはとり除き、洗います。"
-                },
-                {
-                    "steps": 2,
-                    "description": "熱湯で３０秒ほどゆで、すぐ水にとってさまし、手早く水気をしぼって、４ｃｍ長さに切ります。"
-                },
-                {
-                    "steps": 3,
-                    "description": "菊の花は、花びらをむしります。"
-                },
-                {
-                    "steps": 4,
-                    "description": "水カップ３をわかして酢を入れ、菊の花びらを約２０秒ゆでます。水にとってさらし、水気をしっかりしぼります。"
-                },
-                {
-                    "steps": 5,
-                    "description": "しょうゆとだしを合わせます（割りじょうゆ）。"
-                },
-                {
-                    "steps": 6,
-                    "description": "しゅんぎくと菊の花をほぐして混ぜ、割りじょうゆをかけます。"
                 }
-            ],
-            "4人前": [
+            ]
+        },
+        {
+            "instructionServings": [
                 {
-                    "steps": 1,
-                    "description": "しゅんぎくは、茎のかたいところはとり除き、洗います。"
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "うずら豆はよく洗い、浮く豆は除きます。鍋に、豆と水カップ４を入れて５～６時間おきます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "そのまま弱火にかけ、煮立ったら中火にして５～６分煮て、ざるにとり、湯を捨てます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "豆を鍋にもどし、豆がかくれる程度に水を加えて火にかけ、落しぶたをして、煮立ったら弱火にし、約１時間、ときどき水をたしながら（豆にいつも湯がかぶっているようにする）煮ます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "豆がやわらかくなったら砂糖を２回に分けて入れ、弱火でさらに２０分煮て、塩を加えて火を止めます。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "そのままさめるまで（できればひと晩）おいて、味を含ませます。"
+                        }
+                    ]
                 },
                 {
-                    "steps": 2,
-                    "description": "熱湯で３０秒ほどゆで、すぐ水にとってさまし、手早く水気をしぼって、４ｃｍ長さに切ります。"
-                },
-                {
-                    "steps": 3,
-                    "description": "菊の花は、花びらをむしります。"
-                },
-                {
-                    "steps": 4,
-                    "description": "水カップ３／２をわかして酢を入れ、菊の花びらを約２０秒ゆでます。水にとってさらし、水気をしっかりしぼります。"
-                },
-                {
-                    "steps": 5,
-                    "description": "しょうゆとだしを合わせます（割りじょうゆ）。"
-                },
-                {
-                    "steps": 6,
-                    "description": "しゅんぎくと菊の花をほぐして混ぜ、割りじょうゆをかけます。"
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "うずら豆はよく洗い、浮く豆は除きます。鍋に、豆と水カップ４を入れて５～６時間おきます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "そのまま弱火にかけ、煮立ったら中火にして５～６分煮て、ざるにとり、湯を捨てます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "豆を鍋にもどし、豆がかくれる程度に水を加えて火にかけ、落しぶたをして、煮立ったら弱火にし、約１時間、ときどき水をたしながら（豆にいつも湯がかぶっているようにする）煮ます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "豆がやわらかくなったら砂糖を２回に分けて入れ、弱火でさらに２０分煮て、塩を加えて火を止めます。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "そのままさめるまで（できればひと晩）おいて、味を含ませます。"
+                        }
+                    ]
                 }
             ]
         }
-    }
+    ]
 }

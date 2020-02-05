@@ -1,37 +1,14 @@
 [
     {
-        "description": "しゅんぎく",
-        "quantityText": "１００．０ｇ",
-        "ingredientId": 0,
-        "classificationId": 0,
-        "intermediateId": 0
+        "description": "うずら豆",
+        "quantityText": "カップ１（１５０ｇ）"
     },
     {
-        "description": "菊の花（食用）",
-        "quantityText": "２５．０ｇ",
-        "ingredientId": 0,
-        "classificationId": 0,
-        "intermediateId": 0
+        "description": "砂糖",
+        "quantityText": "４５．０ｇ"
     },
     {
-        "description": "酢",
-        "quantityText": "大さじ１／２",
-        "ingredientId": 0,
-        "classificationId": 0,
-        "intermediateId": 0
-    },
-    {
-        "description": "しょうゆ",
-        "quantityText": "大さじ１／４",
-        "ingredientId": 0,
-        "classificationId": 0,
-        "intermediateId": 0
-    },
-    {
-        "description": "だし",
-        "quantityText": "大さじ１／２",
-        "ingredientId": 0,
-        "classificationId": 0,
-        "intermediateId": 0
+        "description": "塩",
+        "quantityText": "小さじ１／１０"
     }
 ]
