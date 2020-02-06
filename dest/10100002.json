@@ -18,7 +18,102 @@
                             "note": "",
                             "salt": 0,
                             "protein": 0,
-                            "calory": "66kcal",
+                            "calory": "66",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "枝豆（さやつき）",
+                                "quantityText": "１５０．０ｇ（正味７５．０ｇ）"
+                            },
+                            {
+                                "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
+                                "quantityText": null
+                            },
+                            {
+                                "description": "items",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "items",
+                                        "quantityText": [
+                                            {
+                                                "description": "砂糖",
+                                                "quantityText": "大さじ１弱"
+                                            },
+                                            {
+                                                "description": "塩",
+                                                "quantityText": "小さじ１／６"
+                                            },
+                                            {
+                                                "description": "だし",
+                                                "quantityText": "大さじ２"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "干ししいたけ",
+                                "quantityText": "大さじ１／２弱"
+                            },
+                            {
+                                "description": "にんじん",
+                                "quantityText": "小さじ１／１２"
+                            },
+                            {
+                                "description": "こんにゃく（白）",
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": "０．５枚"
+                            },
+                            {
+                                "description": "items",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "items",
+                                        "quantityText": [
+                                            {
+                                                "description": "だし",
+                                                "quantityText": "カップ１／３"
+                                            },
+                                            {
+                                                "description": "酒",
+                                                "quantityText": "大さじ１／２"
+                                            },
+                                            {
+                                                "description": "しょうゆ",
+                                                "quantityText": "小さじ１"
+                                            },
+                                            {
+                                                "description": "塩",
+                                                "quantityText": "少々"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "ずんだあえ",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "66",
                             "lipid": 0,
                             "carbohydrate": 0
                         },
@@ -45,102 +140,23 @@
                                         "description": "だし",
                                         "quantityText": "大さじ２"
                                     }
-                                ],
-                                "quantityText": "大さじ１／２弱"
-                            },
-                            {
-                                "description": "干ししいたけ",
-                                "quantityText": "小さじ１／１２"
-                            },
-                            {
-                                "description": "にんじん",
-                                "quantityText": "大さじ１"
-                            },
-                            {
-                                "description": "こんにゃく（白）",
-                                "quantityText": "大さじ１／２弱"
-                            },
-                            {
-                                "description": "Ａ",
-                                "quantityText": "小さじ１／１２"
-                            },
-                            {
-                                "items": [
-                                    {
-                                        "description": "だし",
-                                        "quantityText": "カップ１／３"
-                                    },
-                                    {
-                                        "description": "酒",
-                                        "quantityText": "大さじ１／２"
-                                    },
-                                    {
-                                        "description": "しょうゆ",
-                                        "quantityText": "小さじ１"
-                                    },
-                                    {
-                                        "description": "塩",
-                                        "quantityText": "少々"
-                                    }
-                                ],
-                                "quantityText": "大さじ１"
-                            }
-                        ]
-                    }
-                },
-                {
-                    "unit": "4人",
-                    "dishes": {
-                        "title": "ずんだあえ",
-                        "cookingTool": "",
-                        "nutrition": {
-                            "note": "",
-                            "salt": 0,
-                            "protein": 0,
-                            "calory": "66kcal",
-                            "lipid": 0,
-                            "carbohydrate": 0
-                        },
-                        "ingredients": [
-                            {
-                                "description": "枝豆（さやつき）",
-                                "quantityText": "３００ｇ（正味１５０ｇ）"
-                            },
-                            {
-                                "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
-                                "quantityText": null
-                            },
-                            {
-                                "items": [
-                                    {
-                                        "description": "砂糖",
-                                        "quantityText": "大さじ１弱"
-                                    },
-                                    {
-                                        "description": "塩",
-                                        "quantityText": "小さじ１／６"
-                                    },
-                                    {
-                                        "description": "だし",
-                                        "quantityText": "大さじ２"
-                                    }
                                 ]
                             },
                             {
                                 "description": "干ししいたけ",
-                                "quantityText": "１枚"
+                                "quantityText": "大さじ１／２弱"
                             },
                             {
                                 "description": "にんじん",
-                                "quantityText": "３０ｇ"
+                                "quantityText": "小さじ１／１２"
                             },
                             {
                                 "description": "こんにゃく（白）",
-                                "quantityText": "１／５枚"
+                                "quantityText": "大さじ１"
                             },
                             {
                                 "description": "Ａ",
-                                "quantityText": null
+                                "quantityText": "０．５枚"
                             },
                             {
                                 "items": [

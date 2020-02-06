@@ -2,28 +2,78 @@
     {
         "unit": "2人",
         "dishes": {
-            "title": "うずら豆の甘煮",
+            "title": "ずんだあえ",
             "cookingTool": "",
             "nutrition": {
                 "note": "",
                 "salt": 0,
                 "protein": 0,
-                "calory": "266kcal",
+                "calory": "66kcal",
                 "lipid": 0,
                 "carbohydrate": 0
             },
             "ingredients": [
                 {
-                    "description": "うずら豆",
-                    "quantityText": "カップ１（１５０ｇ）"
+                    "description": "枝豆（さやつき）",
+                    "quantityText": "１５０．０ｇ（正味７５．０ｇ）"
                 },
                 {
-                    "description": "砂糖",
-                    "quantityText": "４５．０ｇ"
+                    "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
+                    "quantityText": null
                 },
                 {
-                    "description": "塩",
-                    "quantityText": "小さじ１／１０"
+                    "items": [
+                        {
+                            "description": "砂糖",
+                            "quantityText": "大さじ１弱"
+                        },
+                        {
+                            "description": "塩",
+                            "quantityText": "小さじ１／６"
+                        },
+                        {
+                            "description": "だし",
+                            "quantityText": "大さじ２"
+                        }
+                    ],
+                    "quantityText": "大さじ１／２弱"
+                },
+                {
+                    "description": "干ししいたけ",
+                    "quantityText": "小さじ１／１２"
+                },
+                {
+                    "description": "にんじん",
+                    "quantityText": "大さじ１"
+                },
+                {
+                    "description": "こんにゃく（白）",
+                    "quantityText": "大さじ１／２弱"
+                },
+                {
+                    "description": "Ａ",
+                    "quantityText": "小さじ１／１２"
+                },
+                {
+                    "items": [
+                        {
+                            "description": "だし",
+                            "quantityText": "カップ１／３"
+                        },
+                        {
+                            "description": "酒",
+                            "quantityText": "大さじ１／２"
+                        },
+                        {
+                            "description": "しょうゆ",
+                            "quantityText": "小さじ１"
+                        },
+                        {
+                            "description": "塩",
+                            "quantityText": "少々"
+                        }
+                    ],
+                    "quantityText": "大さじ１"
                 }
             ]
         }
@@ -31,28 +81,76 @@
     {
         "unit": "4人",
         "dishes": {
-            "title": "うずら豆の甘煮",
+            "title": "ずんだあえ",
             "cookingTool": "",
             "nutrition": {
                 "note": "",
                 "salt": 0,
                 "protein": 0,
-                "calory": "266kcal",
+                "calory": "66kcal",
                 "lipid": 0,
                 "carbohydrate": 0
             },
             "ingredients": [
                 {
-                    "description": "うずら豆",
-                    "quantityText": "カップ２（３００ｇ）"
+                    "description": "枝豆（さやつき）",
+                    "quantityText": "３００ｇ（正味１５０ｇ）"
                 },
                 {
-                    "description": "砂糖",
-                    "quantityText": "９０ｇ"
+                    "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
+                    "quantityText": null
                 },
                 {
-                    "description": "塩",
-                    "quantityText": "小さじ１／５"
+                    "items": [
+                        {
+                            "description": "砂糖",
+                            "quantityText": "大さじ１弱"
+                        },
+                        {
+                            "description": "塩",
+                            "quantityText": "小さじ１／６"
+                        },
+                        {
+                            "description": "だし",
+                            "quantityText": "大さじ２"
+                        }
+                    ]
+                },
+                {
+                    "description": "干ししいたけ",
+                    "quantityText": "１枚"
+                },
+                {
+                    "description": "にんじん",
+                    "quantityText": "３０ｇ"
+                },
+                {
+                    "description": "こんにゃく（白）",
+                    "quantityText": "１／５枚"
+                },
+                {
+                    "description": "Ａ",
+                    "quantityText": null
+                },
+                {
+                    "items": [
+                        {
+                            "description": "だし",
+                            "quantityText": "カップ１／３"
+                        },
+                        {
+                            "description": "酒",
+                            "quantityText": "大さじ１／２"
+                        },
+                        {
+                            "description": "しょうゆ",
+                            "quantityText": "小さじ１"
+                        },
+                        {
+                            "description": "塩",
+                            "quantityText": "少々"
+                        }
+                    ]
                 }
             ]
         }

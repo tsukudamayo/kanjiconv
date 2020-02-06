@@ -1,0 +1,135 @@
+{
+    "recipeId": null,
+    "title": "かぼちゃのいとこ煮",
+    "kana": "カボチャノイトコニ",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "4人",
+    "introductoryEssay": "",
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "かぼちゃのいとこ煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "161",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "かぼちゃ",
+                                "quantityText": "２５０．０ｇ"
+                            },
+                            {
+                                "description": "あずき",
+                                "quantityText": "２５．０ｇ"
+                            },
+                            {
+                                "description": "砂糖",
+                                "quantityText": "大さじ１／２"
+                            },
+                            {
+                                "description": "酒",
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "description": "しょうゆ",
+                                "quantityText": "大さじ１"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "かぼちゃのいとこ煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "161",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "かぼちゃ",
+                                "quantityText": "５００ｇ"
+                            },
+                            {
+                                "description": "あずき",
+                                "quantityText": "５０ｇ"
+                            },
+                            {
+                                "description": "砂糖",
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "description": "酒",
+                                "quantityText": "大さじ２"
+                            },
+                            {
+                                "description": "しょうゆ",
+                                "quantityText": "大さじ２"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "instructionServings": [
+                {
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "あずきは洗って、たっぷりの水を加えて強火で煮、煮立ったら湯を捨てて、再び水を加え、弱火で煮ます。つまんで指先で押すとつぶれるくらいまで（豆により２０～５０分）煮ます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "かぼちゃは３～４ｃｍ角に切り、皮をしま目にむいて、面とりします。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "鍋にかぼちゃ、水カップ１、調味料を入れて強火にかけ、沸とうしたらあずきを入れ、再び沸とうしたら弱火にして落としぶたをし、２０分ほど煮こみます。まだかたいようなら、さらに煮、煮汁がたりないときは水をたします。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "あずきはつぶれるくらいやわらかく煮こんだほうがおいしくなります。"
+                        }
+                    ]
+                },
+                {
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "あずきは洗って、たっぷりの水を加えて強火で煮、煮立ったら湯を捨てて、再び水を加え、弱火で煮ます。つまんで指先で押すとつぶれるくらいまで（豆により２０～５０分）煮ます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "かぼちゃは３～４ｃｍ角に切り、皮をしま目にむいて、面とりします。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "鍋にかぼちゃ、水カップ１、調味料を入れて強火にかけ、沸とうしたらあずきを入れ、再び沸とうしたら弱火にして落としぶたをし、２０分ほど煮こみます。まだかたいようなら、さらに煮、煮汁がたりないときは水をたします。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "あずきはつぶれるくらいやわらかく煮こんだほうがおいしくなります。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

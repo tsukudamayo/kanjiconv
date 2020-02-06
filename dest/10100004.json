@@ -1,0 +1,347 @@
+{
+    "recipeId": null,
+    "title": "かぶら蒸し",
+    "kana": "カブラムシ",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "4人",
+    "introductoryEssay": "",
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "かぶら蒸し",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "124",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "かぶ",
+                                "quantityText": "中２個（１７５ｇ）"
+                            },
+                            {
+                                "description": "白身魚（さわら）",
+                                "quantityText": "１．０切れ（１００．０ｇ）"
+                            },
+                            {
+                                "description": "塩",
+                                "quantityText": "小さじ１／８"
+                            },
+                            {
+                                "description": "みりん",
+                                "quantityText": "大さじ１／４"
+                            },
+                            {
+                                "description": "しょうゆ",
+                                "quantityText": "大さじ１／４"
+                            },
+                            {
+                                "description": "きくらげ",
+                                "quantityText": "１．０枚"
+                            },
+                            {
+                                "description": "にんじん",
+                                "quantityText": "５．０ｇ"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "大さじ２"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "みりん",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "うすくちしょうゆ",
+                                        "quantityText": "小さじ１"
+                                    }
+                                ],
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "description": "さやえんどう",
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "description": "Ｂ",
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "卵白",
+                                        "quantityText": "１／２個分"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "少々"
+                                    }
+                                ],
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "description": "くずあんＣ",
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "カップ１と１／２"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "大さじ１／２"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "小さじ１／４"
+                                    },
+                                    {
+                                        "description": "うすくちしょうゆ",
+                                        "quantityText": "少々"
+                                    }
+                                ],
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "description": "くずあん",
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "かたくり粉",
+                                        "quantityText": "小さじ１と１／２"
+                                    }
+                                ],
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "description": "しょうが汁または練りわさび",
+                                "quantityText": "大さじ１"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "かぶら蒸し",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "124",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "かぶ",
+                                "quantityText": "中４個（３５０ｇ）"
+                            },
+                            {
+                                "description": "白身魚（さわら）",
+                                "quantityText": "２切れ（２００ｇ）"
+                            },
+                            {
+                                "description": "塩",
+                                "quantityText": "小さじ１／４"
+                            },
+                            {
+                                "description": "みりん",
+                                "quantityText": "大さじ１／２"
+                            },
+                            {
+                                "description": "しょうゆ",
+                                "quantityText": "大さじ１／２"
+                            },
+                            {
+                                "description": "きくらげ",
+                                "quantityText": "２枚"
+                            },
+                            {
+                                "description": "にんじん",
+                                "quantityText": "１０ｇ"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "大さじ２"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "みりん",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "うすくちしょうゆ",
+                                        "quantityText": "小さじ１"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "さやえんどう",
+                                "quantityText": "８枚"
+                            },
+                            {
+                                "description": "Ｂ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "卵白",
+                                        "quantityText": "１／２個分"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "少々"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "くずあんＣ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "カップ１と１／２"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "大さじ１／２"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "小さじ１／４"
+                                    },
+                                    {
+                                        "description": "うすくちしょうゆ",
+                                        "quantityText": "少々"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "くずあん",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "かたくり粉",
+                                        "quantityText": "小さじ１と１／２"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "しょうが汁または練りわさび",
+                                "quantityText": "小さじ１／２"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "instructionServings": [
+                {
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "さわらは１切れを２つに切って塩をふり、２０～３０分おきます。水気をふいて、みりん、しょうゆを合わせた中に１０分ほどつけます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "きくらげは水でもどし、石づきをとって、せん切り、にんじんも皮をむいてせん切りにし、Ａで煮汁がなくなるまで煮ます。さやえんどうは筋をとり、さっとゆでて、斜めの細切りにします。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "かぶは皮をむき、すりおろしてざるに入れて、自然に水気をきってＢとよく混ぜ合わせます。（２）を加えて混ぜます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "器に１人分ずつさわらを入れて（３）をかけ、蒸気の立った蒸し器に入れて、強火で７～８分蒸します。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "鍋にＣを煮立て、同量の水でといたかたくり粉でとろみをつけます。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "蒸しあがった（４）に（５）をかけ、しょうが汁を落とします。"
+                        }
+                    ]
+                },
+                {
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "さわらは１切れを２つに切って塩をふり、２０～３０分おきます。水気をふいて、みりん、しょうゆを合わせた中に１０分ほどつけます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "きくらげは水でもどし、石づきをとって、せん切り、にんじんも皮をむいてせん切りにし、Ａで煮汁がなくなるまで煮ます。さやえんどうは筋をとり、さっとゆでて、斜めの細切りにします。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "かぶは皮をむき、すりおろしてざるに入れて、自然に水気をきってＢとよく混ぜ合わせます。（２）を加えて混ぜます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "器に１人分ずつさわらを入れて（３）をかけ、蒸気の立った蒸し器に入れて、強火で７～８分蒸します。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "鍋にＣを煮立て、同量の水でといたかたくり粉でとろみをつけます。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "蒸しあがった（４）に（５）をかけ、しょうが汁を落とします。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

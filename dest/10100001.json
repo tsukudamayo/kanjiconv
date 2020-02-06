@@ -1,0 +1,127 @@
+{
+    "recipeId": null,
+    "title": "うずら豆の甘煮",
+    "kana": "ウズラマメノアマニ",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "4人",
+    "introductoryEssay": "",
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "うずら豆の甘煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "266",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "うずら豆",
+                                "quantityText": "カップ１（１５０ｇ）"
+                            },
+                            {
+                                "description": "砂糖",
+                                "quantityText": "４５．０ｇ"
+                            },
+                            {
+                                "description": "塩",
+                                "quantityText": "小さじ１／１０"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "うずら豆の甘煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "266",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "うずら豆",
+                                "quantityText": "カップ２（３００ｇ）"
+                            },
+                            {
+                                "description": "砂糖",
+                                "quantityText": "９０ｇ"
+                            },
+                            {
+                                "description": "塩",
+                                "quantityText": "小さじ１／５"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "instructionServings": [
+                {
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "うずら豆はよく洗い、浮く豆は除きます。鍋に、豆と水カップ４を入れて５～６時間おきます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "そのまま弱火にかけ、煮立ったら中火にして５～６分煮て、ざるにとり、湯を捨てます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "豆を鍋にもどし、豆がかくれる程度に水を加えて火にかけ、落しぶたをして、煮立ったら弱火にし、約１時間、ときどき水をたしながら（豆にいつも湯がかぶっているようにする）煮ます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "豆がやわらかくなったら砂糖を２回に分けて入れ、弱火でさらに２０分煮て、塩を加えて火を止めます。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "そのままさめるまで（できればひと晩）おいて、味を含ませます。"
+                        }
+                    ]
+                },
+                {
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "うずら豆はよく洗い、浮く豆は除きます。鍋に、豆と水カップ４を入れて５～６時間おきます。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "そのまま弱火にかけ、煮立ったら中火にして５～６分煮て、ざるにとり、湯を捨てます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "豆を鍋にもどし、豆がかくれる程度に水を加えて火にかけ、落しぶたをして、煮立ったら弱火にし、約１時間、ときどき水をたしながら（豆にいつも湯がかぶっているようにする）煮ます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "豆がやわらかくなったら砂糖を２回に分けて入れ、弱火でさらに２０分煮て、塩を加えて火を止めます。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "そのままさめるまで（できればひと晩）おいて、味を含ませます。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

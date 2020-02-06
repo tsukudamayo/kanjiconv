@@ -1,0 +1,233 @@
+{
+    "recipeId": null,
+    "title": "八幡巻き",
+    "kana": "ヤワタマキ",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "4人",
+    "introductoryEssay": "",
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "八幡巻き",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "158",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "ごぼう",
+                                "quantityText": "小１／２本（７５ｇ）"
+                            },
+                            {
+                                "description": "牛もも肉（薄切り）",
+                                "quantityText": "２．０枚（１００．０ｇ）"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "カップ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "小さじ２"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "小さじ２"
+                                    }
+                                ],
+                                "quantityText": "カップ１／２"
+                            },
+                            {
+                                "description": "Ｂ",
+                                "quantityText": "小さじ１／２"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "大さじ１／２"
+                                    },
+                                    {
+                                        "description": "みりん",
+                                        "quantityText": "大さじ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１"
+                                    }
+                                ],
+                                "quantityText": "小さじ１"
+                            },
+                            {
+                                "description": "サラダ油",
+                                "quantityText": "小さじ１"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "八幡巻き",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "158",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "ごぼう",
+                                "quantityText": "小１本（１５０ｇ）"
+                            },
+                            {
+                                "description": "牛もも肉（薄切り）",
+                                "quantityText": "４枚（２００ｇ）"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "カップ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "小さじ２"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "小さじ２"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "Ｂ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "大さじ１／２"
+                                    },
+                                    {
+                                        "description": "みりん",
+                                        "quantityText": "大さじ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "サラダ油",
+                                "quantityText": "大さじ１／２"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "instructionServings": [
+                {
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "ごぼうは洗って皮をこそげとり、１０ｃｍ長さに切ります。太さによって縦に４～６つ割りにし、水にさらします。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "（１）をたっぷりの湯で１～２分ゆでます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "鍋にＡ、ごぼうを入れて弱火で、煮汁がほとんどなくなるまで煮ます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "まな板の上に肉を１枚ずつ広げ、ごぼうを１／４量ずつ置いて巻きます。４本作ります。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "Ｂを合わせておきます。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "フライパンに油を熱し、（４）を強火でころがしながら焼いて、Ｂを加えてからめます。"
+                        },
+                        {
+                            "steps": 7,
+                            "description": "食べやすい大きさに切って、器に盛ります。"
+                        }
+                    ]
+                },
+                {
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "ごぼうは洗って皮をこそげとり、１０ｃｍ長さに切ります。太さによって縦に４～６つ割りにし、水にさらします。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "（１）をたっぷりの湯で１～２分ゆでます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "鍋にＡ、ごぼうを入れて弱火で、煮汁がほとんどなくなるまで煮ます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "まな板の上に肉を１枚ずつ広げ、ごぼうを１／４量ずつ置いて巻きます。４本作ります。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "Ｂを合わせておきます。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "フライパンに油を熱し、（４）を強火でころがしながら焼いて、Ｂを加えてからめます。"
+                        },
+                        {
+                            "steps": 7,
+                            "description": "食べやすい大きさに切って、器に盛ります。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

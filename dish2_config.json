@@ -1,14 +1,80 @@
 [
     {
-        "description": "うずら豆",
-        "quantityText": "カップ１（１５０ｇ）"
+        "description": "枝豆（さやつき）",
+        "quantityText": "１５０．０ｇ（正味７５．０ｇ）"
     },
     {
-        "description": "砂糖",
-        "quantityText": "４５．０ｇ"
+        "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
+        "quantityText": null
     },
     {
-        "description": "塩",
-        "quantityText": "小さじ１／１０"
+        "description": "items",
+        "quantityText": null
+    },
+    {
+        "items": [
+            {
+                "description": "items",
+                "quantityText": [
+                    {
+                        "description": "砂糖",
+                        "quantityText": "大さじ１弱"
+                    },
+                    {
+                        "description": "塩",
+                        "quantityText": "小さじ１／６"
+                    },
+                    {
+                        "description": "だし",
+                        "quantityText": "大さじ２"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "description": "干ししいたけ",
+        "quantityText": "大さじ１／２弱"
+    },
+    {
+        "description": "にんじん",
+        "quantityText": "小さじ１／１２"
+    },
+    {
+        "description": "こんにゃく（白）",
+        "quantityText": "大さじ１"
+    },
+    {
+        "description": "Ａ",
+        "quantityText": "０．５枚"
+    },
+    {
+        "description": "items",
+        "quantityText": null
+    },
+    {
+        "items": [
+            {
+                "description": "items",
+                "quantityText": [
+                    {
+                        "description": "だし",
+                        "quantityText": "カップ１／３"
+                    },
+                    {
+                        "description": "酒",
+                        "quantityText": "大さじ１／２"
+                    },
+                    {
+                        "description": "しょうゆ",
+                        "quantityText": "小さじ１"
+                    },
+                    {
+                        "description": "塩",
+                        "quantityText": "少々"
+                    }
+                ]
+            }
+        ]
     }
 ]

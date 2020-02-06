@@ -1,0 +1,151 @@
+{
+    "recipeId": null,
+    "title": "しゅんぎくと菊の花のおひたし",
+    "kana": "シュンギクトギクノハナノオヒタシ",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "4人",
+    "introductoryEssay": "",
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "しゅんぎくと菊の花のおひたし",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "15",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "しゅんぎく",
+                                "quantityText": "１００．０ｇ"
+                            },
+                            {
+                                "description": "菊の花（食用）",
+                                "quantityText": "２５．０ｇ"
+                            },
+                            {
+                                "description": "酢",
+                                "quantityText": "大さじ１／２"
+                            },
+                            {
+                                "description": "しょうゆ",
+                                "quantityText": "大さじ１／４"
+                            },
+                            {
+                                "description": "だし",
+                                "quantityText": "大さじ１／２"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "しゅんぎくと菊の花のおひたし",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "15",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "しゅんぎく",
+                                "quantityText": "２００ｇ"
+                            },
+                            {
+                                "description": "菊の花（食用）",
+                                "quantityText": "５０ｇ"
+                            },
+                            {
+                                "description": "酢",
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "description": "しょうゆ",
+                                "quantityText": "大さじ１／２"
+                            },
+                            {
+                                "description": "だし",
+                                "quantityText": "大さじ１"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "instructionServings": [
+                {
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "しゅんぎくは、茎のかたいところはとり除き、洗います。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "熱湯で３０秒ほどゆで、すぐ水にとってさまし、手早く水気をしぼって、４ｃｍ長さに切ります。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "菊の花は、花びらをむしります。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "水カップ３をわかして酢を入れ、菊の花びらを約２０秒ゆでます。水にとってさらし、水気をしっかりしぼります。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "しょうゆとだしを合わせます（割りじょうゆ）。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "しゅんぎくと菊の花をほぐして混ぜ、割りじょうゆをかけます。"
+                        }
+                    ]
+                },
+                {
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "しゅんぎくは、茎のかたいところはとり除き、洗います。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "熱湯で３０秒ほどゆで、すぐ水にとってさまし、手早く水気をしぼって、４ｃｍ長さに切ります。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "菊の花は、花びらをむしります。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "水カップ３をわかして酢を入れ、菊の花びらを約２０秒ゆでます。水にとってさらし、水気をしっかりしぼります。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "しょうゆとだしを合わせます（割りじょうゆ）。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "しゅんぎくと菊の花をほぐして混ぜ、割りじょうゆをかけます。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

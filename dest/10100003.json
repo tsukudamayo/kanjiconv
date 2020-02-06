@@ -1,0 +1,233 @@
+{
+    "recipeId": null,
+    "title": "かぶのそぼろ煮",
+    "kana": "カブノソボロニ",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "4人",
+    "introductoryEssay": "",
+    "content": [
+        {
+            "dishServings": [
+                {
+                    "unit": "2人",
+                    "dishes": {
+                        "title": "かぶのそぼろ煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "118",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "かぶ",
+                                "quantityText": "中４個（３５０ｇ）"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "カップ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１と１／２"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "大さじ２"
+                                    }
+                                ],
+                                "quantityText": "カップ１／２"
+                            },
+                            {
+                                "description": "とりひき肉",
+                                "quantityText": "小さじ１／２と１／４"
+                            },
+                            {
+                                "description": "Ｂ",
+                                "quantityText": "大さじ１"
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "大さじ１"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "大さじ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "しょうが汁",
+                                        "quantityText": "小さじ１"
+                                    }
+                                ],
+                                "quantityText": "カップ１／２"
+                            },
+                            {
+                                "description": "しょうが",
+                                "quantityText": "小さじ１／２と１／４"
+                            },
+                            {
+                                "description": "かたくり粉",
+                                "quantityText": "大さじ１"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "unit": "4人",
+                    "dishes": {
+                        "title": "かぶのそぼろ煮",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "118",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "かぶ",
+                                "quantityText": "中８個（７００ｇ）"
+                            },
+                            {
+                                "description": "Ａ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "カップ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１と１／２"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "大さじ２"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "とりひき肉",
+                                "quantityText": "１５０ｇ"
+                            },
+                            {
+                                "description": "Ｂ",
+                                "quantityText": null
+                            },
+                            {
+                                "items": [
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "大さじ１"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "大さじ１"
+                                    },
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "小さじ１"
+                                    },
+                                    {
+                                        "description": "しょうが汁",
+                                        "quantityText": "小さじ１"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "しょうが",
+                                "quantityText": "１かけ"
+                            },
+                            {
+                                "description": "かたくり粉",
+                                "quantityText": "大さじ１／２"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "instructionServings": [
+                {
+                    "unit": "2人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "かぶは皮をむき、４～６つに切ります。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "鍋にＡとかぶを入れ、落としぶたをして、やわらかくなるまで、弱火で煮ます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "かたくり粉を水大さじ１でといておきます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "しょうがは皮をむき、薄く切って細いせん切りにして水にさらします（針しょうが）。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "（２）の火を止めてかぶをとり出し、煮汁に、ひき肉とＢを入れて肉をよくほぐし、弱火にかけます。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "肉に火が通ったら、（３）でとろみをつけ、かぶをもどします。かぶが温まったら、器にとります。（５）のそぼろあんをかけ、針しょうがを上に飾ります。"
+                        }
+                    ]
+                },
+                {
+                    "unit": "4人",
+                    "instruction": [
+                        {
+                            "steps": 1,
+                            "description": "かぶは皮をむき、４～６つに切ります。"
+                        },
+                        {
+                            "steps": 2,
+                            "description": "鍋にＡとかぶを入れ、落としぶたをして、やわらかくなるまで、弱火で煮ます。"
+                        },
+                        {
+                            "steps": 3,
+                            "description": "かたくり粉を水大さじ１でといておきます。"
+                        },
+                        {
+                            "steps": 4,
+                            "description": "しょうがは皮をむき、薄く切って細いせん切りにして水にさらします（針しょうが）。"
+                        },
+                        {
+                            "steps": 5,
+                            "description": "（２）の火を止めてかぶをとり出し、煮汁に、ひき肉とＢを入れて肉をよくほぐし、弱火にかけます。"
+                        },
+                        {
+                            "steps": 6,
+                            "description": "肉に火が通ったら、（３）でとろみをつけ、かぶをもどします。かぶが温まったら、器にとります。（５）のそぼろあんをかけ、針しょうがを上に飾ります。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
