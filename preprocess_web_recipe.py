@@ -85,8 +85,8 @@ class Instruction:
 
 def main():
     count = 0
-    file_list = sorted(os.listdir('./test_data'))
-    src_dir = './test_data'
+    file_list = sorted(os.listdir('./test_data/betterhome_recipe'))
+    src_dir = './test_data/betterhome_recipe'
     dst_dir = './dest'
     if os.path.isdir(dst_dir) is False:
         os.makedirs(dst_dir)

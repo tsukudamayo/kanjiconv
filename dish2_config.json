@@ -1,46 +1,62 @@
 {
-    "title": "厚揚げとぜんまいの煮もの",
+    "title": "卵どうふ",
     "cookingTool": "",
     "nutrition": {
         "note": "",
         "salt": 0,
         "protein": 0,
-        "calory": "112",
+        "calory": "82",
         "lipid": 0,
         "carbohydrate": 0
     },
     "ingredients": [
         {
-            "description": "厚揚げ",
-            "quantityText": "０．５枚"
+            "description": "卵",
+            "quantityText": "２．０個"
         },
         {
-            "description": "ぜんまい（乾燥）",
-            "quantityText": "１５．０ｇ"
+            "description": "Ａ",
+            "quantityText": null
         },
         {
-            "description": "サラダ油",
-            "quantityText": "大さじ１／４"
+            "items": [
+                {
+                    "description": "塩",
+                    "quantityText": "小さじ１／４"
+                },
+                {
+                    "description": "しょうゆ",
+                    "quantityText": "１．０～１．５滴"
+                }
+            ]
         },
         {
-            "description": "だし",
-            "quantityText": "カップ１／２"
+            "description": "Ｂ",
+            "quantityText": null
         },
         {
-            "description": "砂糖",
-            "quantityText": "大さじ１／２と１／４"
+            "items": [
+                {
+                    "description": "塩",
+                    "quantityText": "小さじ１／８"
+                },
+                {
+                    "description": "酒",
+                    "quantityText": "少々"
+                },
+                {
+                    "description": "うすくちしょうゆ",
+                    "quantityText": "少々"
+                }
+            ]
         },
         {
-            "description": "酒",
-            "quantityText": "大さじ１／２"
+            "description": "けずりかつお",
+            "quantityText": "５．０ｇ"
         },
         {
-            "description": "しょうゆ",
-            "quantityText": "大さじ１／２と１／４"
-        },
-        {
-            "description": "しょうゆ（仕上げ用）",
-            "quantityText": "小さじ１／２"
+            "description": "おろししょうが",
+            "quantityText": "適量"
         }
     ]
 }
