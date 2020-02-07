@@ -3,3 +3,5 @@ data.zip
 dotfiles/
 kytea*
 __pycache__/
+test_data/
+dest/

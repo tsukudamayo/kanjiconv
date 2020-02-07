@@ -43,22 +43,21 @@
                                 "items": [
                                     {
                                         "description": "砂糖",
-                                        "quantityText": "大さじ１と１／２"
+                                        "quantityText": "大さじ１／２と１／４"
                                     },
                                     {
                                         "description": "みりん",
-                                        "quantityText": "小さじ２"
+                                        "quantityText": "小さじ１"
                                     },
                                     {
                                         "description": "しょうゆ",
-                                        "quantityText": "大さじ１強"
+                                        "quantityText": "大さじ１／２強"
                                     },
                                     {
                                         "description": "だし",
-                                        "quantityText": "大さじ４"
+                                        "quantityText": "大さじ２"
                                     }
-                                ],
-                                "quantityText": "大さじ１／２と１／４"
+                                ]
                             }
                         ]
                     }

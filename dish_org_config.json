@@ -12,35 +12,35 @@
     "ingredients": [
         {
             "description": "厚揚げ",
-            "quantityText": "０．５枚"
+            "quantityText": "１枚"
         },
         {
             "description": "ぜんまい（乾燥）",
-            "quantityText": "１５．０ｇ"
+            "quantityText": "３０ｇ"
         },
         {
             "description": "サラダ油",
-            "quantityText": "大さじ１／４"
-        },
-        {
-            "description": "だし",
-            "quantityText": "カップ１／２"
-        },
-        {
-            "description": "砂糖",
-            "quantityText": "大さじ１／２と１／４"
-        },
-        {
-            "description": "酒",
             "quantityText": "大さじ１／２"
         },
         {
+            "description": "だし",
+            "quantityText": "カップ１"
+        },
+        {
+            "description": "砂糖",
+            "quantityText": "大さじ１と１／２"
+        },
+        {
+            "description": "酒",
+            "quantityText": "大さじ１"
+        },
+        {
             "description": "しょうゆ",
-            "quantityText": "大さじ１／２と１／４"
+            "quantityText": "大さじ１と１／２"
         },
         {
             "description": "しょうゆ（仕上げ用）",
-            "quantityText": "小さじ１／２"
+            "quantityText": "小さじ１"
         }
     ]
 }

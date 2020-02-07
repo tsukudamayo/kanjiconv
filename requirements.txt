@@ -1,4 +1,5 @@
 jaconv
+regex
 mypy
 pytest
 pytest-watch

@@ -1,72 +1,56 @@
 {
-    "title": "ずんだあえ",
+    "title": "とうがんの煮もの",
     "cookingTool": "",
     "nutrition": {
         "note": "",
         "salt": 0,
         "protein": 0,
-        "calory": "66",
+        "calory": "91",
         "lipid": 0,
         "carbohydrate": 0
     },
     "ingredients": [
         {
-            "description": "枝豆（さやつき）",
-            "quantityText": "１５０．０ｇ（正味７５．０ｇ）"
+            "description": "とうがん",
+            "quantityText": "６００ｇ"
         },
         {
-            "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
+            "description": "うなぎの蒲焼",
+            "quantityText": "８０ｇ"
+        },
+        {
+            "description": "かたくり粉",
+            "quantityText": "大さじ１／２"
+        },
+        {
+            "description": "Ａ",
             "quantityText": null
         },
         {
             "items": [
                 {
-                    "description": "砂糖",
-                    "quantityText": "大さじ１弱"
-                },
-                {
-                    "description": "塩",
-                    "quantityText": "小さじ１／６"
-                },
-                {
                     "description": "だし",
-                    "quantityText": "大さじ２"
-                }
-            ]
-        },
-        {
-            "description": "干ししいたけ",
-            "quantityText": "大さじ１／２弱"
-        },
-        {
-            "description": "にんじん",
-            "quantityText": "小さじ１／１２"
-        },
-        {
-            "description": "こんにゃく（白）",
-            "quantityText": "大さじ１"
-        },
-        {
-            "description": "Ａ",
-            "quantityText": "０．５枚"
-        },
-        {
-            "items": [
-                {
-                    "description": "だし",
-                    "quantityText": "カップ１／３"
+                    "quantityText": "カップ２"
                 },
                 {
                     "description": "酒",
-                    "quantityText": "大さじ１／２"
-                },
-                {
-                    "description": "しょうゆ",
-                    "quantityText": "小さじ１"
+                    "quantityText": "大さじ２"
                 },
                 {
                     "description": "塩",
-                    "quantityText": "少々"
+                    "quantityText": "小さじ１／２"
+                },
+                {
+                    "description": "うすくちしょうゆ",
+                    "quantityText": "小さじ１"
+                },
+                {
+                    "description": "かたくり粉",
+                    "quantityText": "大さじ１と１／２"
+                },
+                {
+                    "description": "水",
+                    "quantityText": "大さじ３"
                 }
             ]
         }

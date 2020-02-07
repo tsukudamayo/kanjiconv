@@ -35,55 +35,53 @@
                                 "items": [
                                     {
                                         "description": "だし",
-                                        "quantityText": "カップ１"
+                                        "quantityText": "カップ１／２"
                                     },
                                     {
                                         "description": "砂糖",
-                                        "quantityText": "小さじ１と１／２"
+                                        "quantityText": "小さじ１／２と１／４"
                                     },
                                     {
                                         "description": "しょうゆ",
-                                        "quantityText": "大さじ２"
+                                        "quantityText": "大さじ１"
                                     }
-                                ],
-                                "quantityText": "カップ１／２"
+                                ]
                             },
                             {
                                 "description": "とりひき肉",
-                                "quantityText": "小さじ１／２と１／４"
+                                "quantityText": "７５．０ｇ"
                             },
                             {
                                 "description": "Ｂ",
-                                "quantityText": "大さじ１"
+                                "quantityText": null
                             },
                             {
                                 "items": [
                                     {
                                         "description": "酒",
-                                        "quantityText": "大さじ１"
+                                        "quantityText": "大さじ１／２"
                                     },
                                     {
                                         "description": "しょうゆ",
-                                        "quantityText": "大さじ１"
+                                        "quantityText": "大さじ１／２"
                                     },
                                     {
                                         "description": "砂糖",
-                                        "quantityText": "小さじ１"
+                                        "quantityText": "小さじ１／２"
                                     },
                                     {
                                         "description": "しょうが汁",
-                                        "quantityText": "小さじ１"
+                                        "quantityText": "小さじ１／２"
                                     }
-                                ],
-                                "quantityText": "カップ１／２"
+                                ]
                             },
                             {
                                 "description": "しょうが",
-                                "quantityText": "小さじ１／２と１／４"
+                                "quantityText": "０．５かけ"
                             },
                             {
                                 "description": "かたくり粉",
-                                "quantityText": "大さじ１"
+                                "quantityText": "大さじ１／４"
                             }
                         ]
                     }

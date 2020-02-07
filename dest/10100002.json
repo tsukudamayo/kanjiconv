@@ -32,72 +32,54 @@
                                 "quantityText": null
                             },
                             {
-                                "description": "items",
-                                "quantityText": null
-                            },
-                            {
                                 "items": [
                                     {
-                                        "description": "items",
-                                        "quantityText": [
-                                            {
-                                                "description": "砂糖",
-                                                "quantityText": "大さじ１弱"
-                                            },
-                                            {
-                                                "description": "塩",
-                                                "quantityText": "小さじ１／６"
-                                            },
-                                            {
-                                                "description": "だし",
-                                                "quantityText": "大さじ２"
-                                            }
-                                        ]
+                                        "description": "砂糖",
+                                        "quantityText": "大さじ１／２弱"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "小さじ１／１２"
+                                    },
+                                    {
+                                        "description": "だし",
+                                        "quantityText": "大さじ１"
                                     }
                                 ]
                             },
                             {
                                 "description": "干ししいたけ",
-                                "quantityText": "大さじ１／２弱"
-                            },
-                            {
-                                "description": "にんじん",
-                                "quantityText": "小さじ１／１２"
-                            },
-                            {
-                                "description": "こんにゃく（白）",
-                                "quantityText": "大さじ１"
-                            },
-                            {
-                                "description": "Ａ",
                                 "quantityText": "０．５枚"
                             },
                             {
-                                "description": "items",
+                                "description": "にんじん",
+                                "quantityText": "１５．０ｇ"
+                            },
+                            {
+                                "description": "こんにゃく（白）",
+                                "quantityText": "０．１枚"
+                            },
+                            {
+                                "description": "Ａ",
                                 "quantityText": null
                             },
                             {
                                 "items": [
                                     {
-                                        "description": "items",
-                                        "quantityText": [
-                                            {
-                                                "description": "だし",
-                                                "quantityText": "カップ１／３"
-                                            },
-                                            {
-                                                "description": "酒",
-                                                "quantityText": "大さじ１／２"
-                                            },
-                                            {
-                                                "description": "しょうゆ",
-                                                "quantityText": "小さじ１"
-                                            },
-                                            {
-                                                "description": "塩",
-                                                "quantityText": "少々"
-                                            }
-                                        ]
+                                        "description": "だし",
+                                        "quantityText": "カップ１／６"
+                                    },
+                                    {
+                                        "description": "酒",
+                                        "quantityText": "大さじ１／４"
+                                    },
+                                    {
+                                        "description": "しょうゆ",
+                                        "quantityText": "小さじ１／２"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "少々"
                                     }
                                 ]
                             }
@@ -120,7 +102,7 @@
                         "ingredients": [
                             {
                                 "description": "枝豆（さやつき）",
-                                "quantityText": "１５０．０ｇ（正味７５．０ｇ）"
+                                "quantityText": "３００ｇ（正味１５０ｇ）"
                             },
                             {
                                 "description": "枝豆（さやつき）３００ｇ（正味１５０ｇ）",
@@ -144,19 +126,19 @@
                             },
                             {
                                 "description": "干ししいたけ",
-                                "quantityText": "大さじ１／２弱"
+                                "quantityText": "１枚"
                             },
                             {
                                 "description": "にんじん",
-                                "quantityText": "小さじ１／１２"
+                                "quantityText": "３０ｇ"
                             },
                             {
                                 "description": "こんにゃく（白）",
-                                "quantityText": "大さじ１"
+                                "quantityText": "１／５枚"
                             },
                             {
                                 "description": "Ａ",
-                                "quantityText": "０．５枚"
+                                "quantityText": null
                             },
                             {
                                 "items": [

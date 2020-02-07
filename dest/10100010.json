@@ -43,26 +43,25 @@
                                 "items": [
                                     {
                                         "description": "だし",
-                                        "quantityText": "カップ１と１／２"
+                                        "quantityText": "カップ１／２と１／４"
                                     },
                                     {
                                         "description": "みりん",
-                                        "quantityText": "大さじ３"
+                                        "quantityText": "大さじ３／２"
                                     },
                                     {
                                         "description": "しょうゆ",
-                                        "quantityText": "大さじ３"
+                                        "quantityText": "大さじ３／２"
                                     },
                                     {
                                         "description": "酒",
-                                        "quantityText": "大さじ３"
+                                        "quantityText": "大さじ３／２"
                                     }
-                                ],
-                                "quantityText": "カップ１／２と１／４"
+                                ]
                             },
                             {
                                 "description": "粉さんしょう",
-                                "quantityText": "大さじ３／２"
+                                "quantityText": "適宜"
                             }
                         ]
                     }

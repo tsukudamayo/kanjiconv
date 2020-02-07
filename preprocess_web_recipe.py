@@ -84,118 +84,147 @@ class Instruction:
 
 
 def main():
-    # count = 0
-    # file_list = os.listdir('./test_data')
-    # src_dir = './test_data'
-    # dst_dir = './dest'
-    # if os.path.isdir(dst_dir) is False:
-    #     os.makedirs(dst_dir)
-    # for f in file_list:
-    #     src_path = os.path.join(src_dir, f)
-    #     dst_path = os.path.join(dst_dir, f)
+    count = 0
+    file_list = sorted(os.listdir('./test_data'))
+    src_dir = './test_data'
+    dst_dir = './dest'
+    if os.path.isdir(dst_dir) is False:
+        os.makedirs(dst_dir)
+    for f in file_list:
+        src_path = os.path.join(src_dir, f)
+        print('filepath : ', src_path)
+        dst_path = os.path.join(dst_dir, f)
 
-    src_path = './test_data/10100002.json'
-    dst_path = './dest/10100002.json'
-    data = load_json(src_path)
-    dish_servings = []
-    dish_builder = Dish(data)
-    dish = dish_builder.build()
-    dish4 = dish
-    print('**************** dish4 ****************')
-    print(dish4)
-    for k, v in dish4.items():
-        print('dish4 : ', k, v)
-   
-    # ------ #
-    # dish 2 #
-    # ------ #
-    data = load_json(src_path)
-    dish2_builder = Dish(data)
-    dish2 = dish2_builder.build()
-    norm = normalize_quantity(dish2, 4)
-    params = multiply_quantity(dish2, norm, 2)
-    multi = Multiplier(dish, params)
-    dish2_ing = multi.build()
-    print('***************************************')
-    print('len norm : ', len(norm))
-    print('len parmas : ', len(params))
-    print('**************** norm ****************')
-    for n in norm:
-        print('n  : ', n)
-    print('**************** params ****************')
-    for p in params:
-        print('p : ', p)
-    print('**************** dish2 ****************')
-    print(dish2_ing)
-    for d in dish2_ing:
-        print('dish2 : ', d)
-    print('****************++++++++****************')
-    print('len dish2_ing - params', len(dish2_ing), len(params))
-    with open('dish4_config.json', 'w', encoding='utf-8') as w4:
-        json.dump(dish4, w4, indent=4, ensure_ascii=False)
-    with open('dish2_config.json', 'w', encoding='utf-8') as w2:
-        json.dump(dish2_ing, w2, indent=4, ensure_ascii=False)
+        if src_path.find('.json') < 0 or os.path.isfile(dst_path):
+            continue
 
-    cookingtool = ""
-    nutrition  = {
-        "note":  "",
-        "salt": 0,
-        "protein": 0,
-        "calory": data['calory'].split('kcal')[0],
-        "lipid": 0,
-        "carbohydrate": 0,
-    }
-    dish2 = {
-        "title": data['title'],
-        "cookingTool": '',
-        "nutrition": nutrition,
-        "ingredients": dish2_ing
-    }
-  
-    # ------------- #
-    # dish_servings #
-    # ------------- #
-    dish_servings.append({"unit": "2人", "dishes": dish2})
-    dish_servings.append({"unit": "4人", "dishes": dish4})
-    
-    instruction_builder = Instruction(data)
-    instruction = instruction_builder.build()
-    print('instruction')
-    print(instruction)
-    
-    # -------------------- #
-    # instruction_servings #
-    # -------------------- #
-    instruction_servings = []
-    instruction_servings.append({"unit": "2人", "instruction": instruction})
-    instruction_servings.append({"unit": "4人", "instruction": instruction})
-    
-    # content
-    content = []
-    content.append({"dishServings": dish_servings})
-    content.append({"instructionServings": instruction_servings})
-    
-    # toplevel
-    toplevel = OrderedDict()
-    toplevel['recipeId'] = None
-    toplevel['title'] = data['title']
-    toplevel['kana'] = convert_kana(data['title'])
-    toplevel['description'] = ''
-    toplevel['dishType'] = 'main'
-    toplevel['defaultServing'] = '4人'
-    toplevel['introductoryEssay'] = ''
-    toplevel['content'] = content
-    
-    print('result')
-    print(toplevel)
-    
-    with open(dst_path, 'w', encoding='utf-8') as w:
-        json.dump(toplevel, w, indent=4, ensure_ascii=False)
+        # src_path = './test_data/10100012.json'
+        # dst_path = './dest/10100012.json'
+        data = load_json(src_path)
+        print('data')
+        print(data)
+        servings = int(data['ingredients']['食材'].split('人')[0])
+        print('servings : ', servings)
+        dish_servings = []
+        dish_builder = Dish(data)
+        dish_org = dish_builder.build()
+        norm = normalize_quantity(dish_org, servings)
+        print('**************** dish_org ****************')
+        print(dish_org)
+        for k, v in dish_org.items():
+            print('dish_org : ', k, v)
+        
+        # ------ #
+        # dish 2 #
+        # ------ #
+        if servings == 2:
+            dish2 = dish_org
+            pass
+        else:
+            data = load_json(src_path)
+            dish2_builder = Dish(data)
+            dish2 = dish2_builder.build()
+            params = multiply_quantity(dish2, norm, 2)
+            multi = Multiplier(dish2, params)
+            dish2_ing = multi.build()
+            
+            cookingtool = ""
+            nutrition  = {
+                "note":  "",
+                "salt": 0,
+                "protein": 0,
+                "calory": data['calory'].split('kcal')[0],
+                "lipid": 0,
+                "carbohydrate": 0,
+            }
+            dish2 = {
+                "title": data['title'],
+                "cookingTool": '',
+                "nutrition": nutrition,
+                "ingredients": dish2_ing
+            }
 
-        # count += 1
+        # ----- #
+        # dish4 #
+        # ----- #
+        if servings == 4:
+            dish4 = dish_org
+            pass
+        else:
+            data = load_json(src_path)
+            dish4_builder = Dish(data)
+            dish4 = dish4_builder.build()
+            params = multiply_quantity(dish4, norm, 4)
+            multi = Multiplier(dish4, params)
+            dish4_ing = multi.build()
+            
+            cookingtool = ""
+            nutrition  = {
+                "note":  "",
+                "salt": 0,
+                "protein": 0,
+                "calory": data['calory'].split('kcal')[0],
+                "lipid": 0,
+                "carbohydrate": 0,
+            }
+            dish4 = {
+                "title": data['title'],
+                "cookingTool": '',
+                "nutrition": nutrition,
+                "ingredients": dish4_ing
+            }
 
-        # if count == 2:
-        #     break
+        with open('dish_org_config.json', 'w', encoding='utf-8') as w:
+            json.dump(dish_org, w, indent=4, ensure_ascii=False)
+        with open('dish_org_config.json', 'w', encoding='utf-8') as w4:
+            json.dump(dish4, w4, indent=4, ensure_ascii=False)
+        with open('dish2_config.json', 'w', encoding='utf-8') as w2:
+            json.dump(dish2, w2, indent=4, ensure_ascii=False)
+        
+        # ------------- #
+        # dish_servings #
+        # ------------- #
+        dish_servings.append({"unit": "2人", "dishes": dish2})
+        dish_servings.append({"unit": "4人", "dishes": dish4})
+        
+        instruction_builder = Instruction(data)
+        instruction = instruction_builder.build()
+        print('instruction')
+        print(instruction)
+        
+        # -------------------- #
+        # instruction_servings #
+        # -------------------- #
+        instruction_servings = []
+        instruction_servings.append({"unit": "2人", "instruction": instruction})
+        instruction_servings.append({"unit": "4人", "instruction": instruction})
+        
+        # content
+        content = []
+        content.append({"dishServings": dish_servings})
+        content.append({"instructionServings": instruction_servings})
+        
+        # toplevel
+        toplevel = OrderedDict()
+        toplevel['recipeId'] = None
+        toplevel['title'] = data['title']
+        toplevel['kana'] = convert_kana(data['title'])
+        toplevel['description'] = ''
+        toplevel['dishType'] = 'main'
+        toplevel['defaultServing'] = '4人'
+        toplevel['introductoryEssay'] = ''
+        toplevel['content'] = content
+        
+        print('result')
+        print(toplevel)
+        
+        with open(dst_path, 'w', encoding='utf-8') as w:
+            json.dump(toplevel, w, indent=4, ensure_ascii=False)
+        
+            # count += 1
+        
+            # if count == 2:
+                #     break
 
 
 if __name__ == '__main__':
