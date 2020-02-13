@@ -1,62 +1,42 @@
 {
-    "title": "卵どうふ",
+    "title": "ごまどうふ",
     "cookingTool": "",
     "nutrition": {
         "note": "",
         "salt": 0,
         "protein": 0,
-        "calory": "82",
+        "calory": "151",
         "lipid": 0,
         "carbohydrate": 0
     },
     "ingredients": [
         {
-            "description": "卵",
-            "quantityText": "２．０個"
+            "description": "練りごま",
+            "quantityText": "３５．０ｇ"
         },
         {
-            "description": "Ａ",
-            "quantityText": null
+            "description": "くず粉",
+            "quantityText": "１５．０ｇ"
         },
         {
-            "items": [
-                {
-                    "description": "塩",
-                    "quantityText": "小さじ１／４"
-                },
-                {
-                    "description": "しょうゆ",
-                    "quantityText": "１．０～１．５滴"
-                }
-            ]
+            "description": "みりん",
+            "quantityText": "大さじ１／２"
         },
         {
-            "description": "Ｂ",
-            "quantityText": null
+            "description": "だし",
+            "quantityText": "カップ１／６"
         },
         {
-            "items": [
-                {
-                    "description": "塩",
-                    "quantityText": "小さじ１／８"
-                },
-                {
-                    "description": "酒",
-                    "quantityText": "少々"
-                },
-                {
-                    "description": "うすくちしょうゆ",
-                    "quantityText": "少々"
-                }
-            ]
+            "description": "しょうゆ",
+            "quantityText": "大さじ１／２"
         },
         {
-            "description": "けずりかつお",
-            "quantityText": "５．０ｇ"
+            "description": "練りわさび",
+            "quantityText": "少々"
         },
         {
-            "description": "おろししょうが",
-            "quantityText": "適量"
+            "description": "流し箱（８×１０×高さ４ｃｍ）",
+            "quantityText": "容量１５０ｍｌ"
         }
     ]
 }
