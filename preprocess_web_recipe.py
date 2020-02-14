@@ -26,7 +26,8 @@ class Recipe:
         toplevel = OrderedDict()
         toplevel['recipeId'] = None
         toplevel['title'] = self.data['title']
-        toplevel['kana'] = convert_kana(self.data['title'])
+        # toplevel['kana'] = convert_kana(self.data['title'])
+        toplevel['kana'] = ''
         toplevel['description'] = ''
         toplevel['dishType'] = 'main'
         toplevel['defaultServing'] = self.data['ingredients']['食材'].split('人')[0] + '人'
@@ -36,9 +37,7 @@ class Recipe:
         return toplevel
 
     def build_content(self, dish_servings, instruction_servings):
-        content = []
-        content.append({"dishServings": dish_servings})
-        content.append({"instructionServings": instruction_servings})
+        content = {"dishServings": dish_servings, "instructionServings": instruction_servings}
 
         return content
 
@@ -98,7 +97,8 @@ class Instruction:
         strings = target.split('\n')
         null_check = [s for s in strings if s]
     
-        return [{"steps": idx+1, "description": s} for idx, s in enumerate(null_check)]
+        return [{"step": idx+1, "description": s} for idx, s in enumerate(null_check)]
+
 def convert_servings(data: Dict, servings: int) -> List:
     default_servings = int(data['ingredients']['食材'].split('人')[0])
     dish_builder = Dish(data)
@@ -130,58 +130,69 @@ def load_json(filepath: str) -> Dict:
 
 
 def main():
-    # count = 0
-    # file_list = sorted(os.listdir('./test_data/betterhome_recipe'))
+    count = 0
+    file_list = sorted(os.listdir('./test_data/betterhome_recipe'))
     src_dir = './test_data/betterhome_recipe'
     dst_dir = './dest'
     if os.path.isdir(dst_dir) is False:
         os.makedirs(dst_dir)
-    # for f in file_list:
-    #     src_path = os.path.join(src_dir, f)
-    #     dst_path = os.path.join(dst_dir, f)
+    for f in file_list:
+        import time
+        time0 = time.time()
+        print('############################ {} ####################################'.format(count))
+        src_path = os.path.join(src_dir, f)
+        dst_path = os.path.join(dst_dir, f)
 
-    #     if not f.endswith('.json'):
-    #         continue
-    #     if os.path.isfile(dst_path):
-    #         continue
+        if not f.endswith('.json'):
+            continue
+        if os.path.isfile(dst_path):
+            continue
 
-    src_path = './test_data/10100003.json'
-    dst_path = './dest/10100003.json'
+    # src_path = './test_data/10100003.json'
+    # dst_path = './dest/10100003.json'
 
-    ingredients_2 = convert_servings(load_json(src_path), 2)
-    ingredients_4 = convert_servings(load_json(src_path), 4)
-    print('ingredients_2')
-    print(ingredients_2)
-    print('ingredients_4')
-    print(ingredients_4)
+        try:
+            ingredients_2 = convert_servings(load_json(src_path), 2)
+            ingredients_4 = convert_servings(load_json(src_path), 4)
+            print('ingredients_2')
+            print(ingredients_2)
+            print('ingredients_4')
+            print(ingredients_4)
+        except ValueError:
+            print('Value Error')
+            continue
+        
+        # ---- #
+        # dish #
+        # ---- #
+        dish_builder = Dish(load_json(src_path))
+        dish2 = dish_builder.build(ingredients=ingredients_2)
+        dish4 = dish_builder.build(ingredients=ingredients_4)
+        dish_servings = []
+        dish_servings.append({"unit": "2人", "dishes": [dish2]})
+        dish_servings.append({"unit": "4人", "dishes": [dish4]})
+        
+        # ----------- #
+        # instruction #
+        # ----------- #
+        instruction_builder = Instruction(load_json(src_path))
+        instruction = instruction_builder.build()
+        instruction_servings = []
+        instruction_servings.append({"unit": "2人", "instructions": instruction})
+        instruction_servings.append({"unit": "4人", "instructions": instruction})
+        
+        # ------------ #
+        # build recipe #
+        # ------------ #
+        recipe_instance = Recipe(load_json(src_path), dish_servings, instruction_servings)
+        recipe = recipe_instance.build()
+        
+        with open(dst_path, 'w', encoding='utf-8') as w:
+            json.dump(recipe, w, indent=4, ensure_ascii=False)
 
-    # ---- #
-    # dish #
-    # ---- #
-    dish_builder = Dish(load_json(src_path))
-    dish2 = dish_builder.build(ingredients=ingredients_2)
-    dish4 = dish_builder.build(ingredients=ingredients_4)
-    dish_servings = []
-    dish_servings.append({"unit": "2人", "dishes": dish2})
-    dish_servings.append({"unit": "4人", "dishes": dish4})
-
-    # ----------- #
-    # instruction #
-    # ----------- #
-    instruction_builder = Instruction(load_json(src_path))
-    instruction = instruction_builder.build()
-    instruction_servings = []
-    instruction_servings.append({"unit": "2人", "instruction": instruction})
-    instruction_servings.append({"unit": "4人", "instruction": instruction})
-
-    # ------------ #
-    # build recipe #
-    # ------------ #
-    recipe_instance = Recipe(load_json(src_path), dish_servings, instruction_servings)
-    recipe = recipe_instance.build()
-    
-    with open(dst_path, 'w', encoding='utf-8') as w:
-        json.dump(recipe, w, indent=4, ensure_ascii=False)
+        count += 1
+        time1 = time.time()
+        print(time1 - time0)
         
 
 if __name__ == '__main__':

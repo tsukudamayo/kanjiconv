@@ -26,9 +26,7 @@ def parse_ingredients(data: Dict) -> List:
 def divide_key_value(dic: Dict) -> Dict:
     for k, v in dic.items():
         if isinstance(v, dict):
-            items = generator_to_dict(v)
-            yield {'description': k, 'quantityText': None}
-            yield items
+            yield {'description': k, 'quantityText': None, 'items': list(divide_key_value(v))}
         else:
             yield {'description': k, 'quantityText': v}
 
@@ -84,10 +82,7 @@ class Multiplier:
 
     def dict_to_zenkaku(self, ingredients: Dict) -> List:
         if 'items' in ingredients.keys():
-            items_generator = list(self.items_to_zenkaku(ingredients['items']))
-            items_flatten = list(itertools.chain.from_iterable(items_generator))
-            items = {'items': items_flatten}
-            yield items
+            yield ingredients
         else:
             que = self.queue.pop(0)
             ingredients['quantityText'] = self.value_to_zenkaku(que)
@@ -128,18 +123,14 @@ def multiply_quantity(data: List, params: List, multiplier: Any) -> List:
 
 
 def operation_by_type(types: str, strings: str, division: Any) -> Any:
-    print('types - strings : ', types, strings)
     if types == 'real':
-        result = float(strings) / division
-        print('result')
-        print(result)
-        print('result.is_integer()')
-        print(result.is_integer())
+        try:
+            result = float(strings) / division
+        except ValueError:
+            return None
         if result.is_integer():
-            print('return : ', int(result))
             return int(result)
-        else:
-            print('return : ', result)
+        elif not result.is_integer():
             return result
     elif types == 'fraction':
         return Fraction(strings) / division
@@ -212,13 +203,10 @@ def aggregate_quantities(dic: Dict) -> str:
 
 def dict_to_hankaku(zenkaku_dict: Dict) -> Dict:
     if 'items' in zenkaku_dict:
-        print('items')
         items_value = zenkaku_dict['items']
         items = generator_to_hankaku(items_value)
-        print(items)
         yield items
     else:
-        print({k: value_to_hankaku(v) for k, v in zenkaku_dict.items()})
         yield {k: value_to_hankaku(v) for k, v in zenkaku_dict.items()}
 
 
@@ -249,8 +237,8 @@ def define_output_type(words: List) -> str:
 
 
 def operation_by_output_type(quantity_type: str, word_type:str, strings: str,  multiplier: Any) -> List:
-    print('operation_by_output_type')
-    print(quantity_type, word_type, strings, multiplier)
+    if not strings:
+        return 'null'
     if quantity_type == 'fraction':
         if word_type == 'strings':
             return strings
@@ -261,12 +249,8 @@ def operation_by_output_type(quantity_type: str, word_type:str, strings: str,  m
             return strings
         else:
             if (float(strings) * multiplier).is_integer():
-                print('True')
-                print((float(strings) * multiplier).is_integer())
                 return int(float(strings) * multiplier)
             else:
-                print('False')
-                print((float(strings) * multiplier).is_integer())
                 return float(strings) * multiplier
     elif quantity_type == 'null':
         return 'null'
@@ -299,12 +283,8 @@ def convert_kana(strings):
     join_strings = ''.join(target_array)
     regex = re.compile('[\u3041-\u309F]+')
     process_strings = regex.findall(join_strings)
-    print(process_strings)
     hiragana = ''.join(process_strings)
-    print(hiragana)
     katakana = jaconv.hira2kata(hiragana)
-    print(katakana)
     zenkaku = jaconv.h2z(katakana, digit=True, ascii=True)
-    print(zenkaku)
 
     return zenkaku
