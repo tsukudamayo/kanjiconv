@@ -132,10 +132,10 @@ def load_json(filepath: str) -> Dict:
 def main():
     # count = 0
     # file_list = sorted(os.listdir('./test_data/betterhome_recipe'))
-    # src_dir = './test_data/betterhome_recipe'
-    # dst_dir = './dest'
-    # if os.path.isdir(dst_dir) is False:
-    #     os.makedirs(dst_dir)
+    src_dir = './test_data/betterhome_recipe'
+    dst_dir = './dest'
+    if os.path.isdir(dst_dir) is False:
+        os.makedirs(dst_dir)
     # for f in file_list:
     #     src_path = os.path.join(src_dir, f)
     #     dst_path = os.path.join(dst_dir, f)

@@ -130,7 +130,17 @@ def multiply_quantity(data: List, params: List, multiplier: Any) -> List:
 def operation_by_type(types: str, strings: str, division: Any) -> Any:
     print('types - strings : ', types, strings)
     if types == 'real':
-        return float(strings) / division
+        result = float(strings) / division
+        print('result')
+        print(result)
+        print('result.is_integer()')
+        print(result.is_integer())
+        if result.is_integer():
+            print('return : ', int(result))
+            return int(result)
+        else:
+            print('return : ', result)
+            return result
     elif types == 'fraction':
         return Fraction(strings) / division
     else:
@@ -239,6 +249,8 @@ def define_output_type(words: List) -> str:
 
 
 def operation_by_output_type(quantity_type: str, word_type:str, strings: str,  multiplier: Any) -> List:
+    print('operation_by_output_type')
+    print(quantity_type, word_type, strings, multiplier)
     if quantity_type == 'fraction':
         if word_type == 'strings':
             return strings
@@ -248,7 +260,14 @@ def operation_by_output_type(quantity_type: str, word_type:str, strings: str,  m
         if word_type == 'strings':
             return strings
         else:
-            return float(strings) * multiplier
+            if (float(strings) * multiplier).is_integer():
+                print('True')
+                print((float(strings) * multiplier).is_integer())
+                return int(float(strings) * multiplier)
+            else:
+                print('False')
+                print((float(strings) * multiplier).is_integer())
+                return float(strings) * multiplier
     elif quantity_type == 'null':
         return 'null'
       
