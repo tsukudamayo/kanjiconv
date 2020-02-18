@@ -31,29 +31,39 @@ def divide_key_value(dic: Dict) -> Dict:
             yield {'description': k, 'quantityText': v}
 
 
-
 def generator_to_dict(dic: Dict) -> Dict:
     return {"items": list(divide_key_value(dic))}
 
 
-# --------- #
-# normalize #
-# --------- #
-# TODO pytest
-def normalize_quantity(data: List, divison: Any) -> List:
-    ingredients = data['ingredients']
-    hankaku_ingredients = [list(dict_to_hankaku(i)) for i in ingredients]
-    hankaku_ingredients = list(itertools.chain.from_iterable(hankaku_ingredients))
-    quantity_text = [list(aggregate_quantities(i)) for i in hankaku_ingredients]
-    quantity_text = list(itertools.chain.from_iterable(quantity_text))
-    candidate_borders = [candidate_border(q) for q in quantity_text]
-    separate_quantities = [list(separate_quantity(q, b)) for q, b in zip(quantity_text, candidate_borders)]
-    quantity_types = [[define_input_type(w) for w in s] for s in separate_quantities]
-    norm_quantities = [[operation_by_type(t, w, divison) for t, w in zip(types, words)]
-                       for types, words in zip(quantity_types, separate_quantities)]
-    
-    return norm_quantities
+# ---------- #
+# preprocess #
+# ---------- #
+class Preprocessor:
 
+    def __init__(self, data: List):
+        ingredients = data['ingredients']
+        self.hankaku_ingredients = [list(dict_to_hankaku(i)) for i in ingredients]
+        self.hankaku_ingredients = list(itertools.chain.from_iterable(self.hankaku_ingredients))
+        self.quantity_text = [list(aggregate_quantities(i)) for i in self.hankaku_ingredients]
+        self.quantity_text = list(itertools.chain.from_iterable(self.quantity_text))
+        self.candidate_borders = [candidate_border(q) for q in self.quantity_text]
+        self.separate_quantities = [list(separate_quantity(q, b)) for q, b in zip(self.quantity_text, self.candidate_borders)]
+        self.quantity_types = [[define_input_type(w) for w in s] for s in self.separate_quantities]
+
+    def normalize_quantity(self, division: Any) -> List:
+        norm_quantities = [[operation_by_type(t, w, division) for t, w in zip(types, words)]
+                           for types, words in zip(self.quantity_types, self.separate_quantities)]
+        
+        return norm_quantities
+
+    def multiply_quantity(self, params: List, multiplier: Any) -> List:
+        output_types = [define_output_type(words) for words in self.quantity_types]
+        multiply_quantities = [[operation_by_output_type(q, t, w, multiplier)
+                                for t, w in zip(types, words)]
+                               for q, types, words in zip(output_types, self.quantity_types, params)]
+        
+        return multiply_quantities
+        
 
 # -------- #
 # multiply #
@@ -81,7 +91,18 @@ class Multiplier:
             return ''.join(strings_array)
 
     def dict_to_zenkaku(self, ingredients: Dict) -> List:
+        # TODO TEST
+        # print('dict_to_zenkaku/ingredients')
+        # print(ingredients)
         if 'items' in ingredients.keys():
+            for idx, item in enumerate(ingredients['items']):
+                que = self.queue.pop(0)
+                # print('que')
+                # print(que)
+                # print('item')
+                # print(item)
+                # print(ingredients['items'][idx]['quantityText'])
+                ingredients['items'][idx]['quantityText'] = self.value_to_zenkaku(que)
             yield ingredients
         else:
             que = self.queue.pop(0)
@@ -103,23 +124,41 @@ class Multiplier:
     
         return zenkaku
 
-# TODO merge normalize_quantity
-def multiply_quantity(data: List, params: List, multiplier: Any) -> List:
-    ingredients = data['ingredients']
-    hankaku_ingredients = [list(dict_to_hankaku(i)) for i in ingredients]
-    hankaku_ingredients = list(itertools.chain.from_iterable(hankaku_ingredients))
-    quantity_text = [list(aggregate_quantities(i)) for i in hankaku_ingredients]
-    quantity_text = list(itertools.chain.from_iterable(quantity_text))
-    candidate_borders = [candidate_border(q) for q in quantity_text]
-    separate_quantities = [list(separate_quantity(q, b)) for q, b in zip(quantity_text, candidate_borders)]
-    quantity_types = [[define_input_type(w) for w in s] for s in separate_quantities]
 
-    output_types = [define_output_type(words) for words in quantity_types]
-    multiply_quantities = [[operation_by_output_type(q, t, w, multiplier)
-                            for t, w in zip(types, words)]
-                           for q, types, words in zip(output_types, quantity_types, params)]
+def multiply_dish(norm, dish, servings, default_servings):
+    """
+    multiply normalized ingredients by servings
+    Input: 
+        norm: dict normalized ingreidents by function op.normalize_quantity()
+        dish: dict return value Dish.build()
+        servings: int 
+            servings which you want to convert
+        default_servings: int
+            ex:
+            data = load_json(src_path)
+            default_servings = data['ingredients']['食材'].split('人')[0]
 
-    return multiply_quantities
+    Output:
+        dict: multiplied ingredients
+    """
+
+    if servings == default_servings:
+        ingredients = dish['ingredients']
+
+        return ingredients
+    else:
+        preprocess = Preprocessor(dish)
+        params = preprocess.multiply_quantity(norm, servings)
+        multi = Multiplier(dish, params)
+        ingredients = multi.build()
+
+        # # TODO TEST
+        # print('multiply_dish/preprocess')
+        # print(preprocess)
+        # print(params)
+        # print(ingredients)
+
+        return ingredients
 
 
 def operation_by_type(types: str, strings: str, division: Any) -> Any:

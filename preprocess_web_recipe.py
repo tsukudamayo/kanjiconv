@@ -95,6 +95,7 @@ class Instruction:
     
         return [{"step": idx+1, "description": s} for idx, s in enumerate(null_check)]
 
+
 def convert_servings(data: Dict, servings: int) -> List:
     """
     normalize ingredients quantity by servings
@@ -131,38 +132,11 @@ def convert_servings(data: Dict, servings: int) -> List:
     dish_builder = Dish(data)
     dish = dish_builder.build()
 
-    norm = op.normalize_quantity(dish, default_servings)
+    preprocess = op.Preprocessor(dish)
+    norm = preprocess.normalize_quantity(default_servings)
 
-    return multiply_dish(norm, dish, servings, default_servings)
+    return op.multiply_dish(norm, dish, servings, default_servings)
 
-
-def multiply_dish(norm, dish, servings, default_servings):
-    """
-    multiply normalized ingredients by servings
-    Input: 
-        norm: dict normalized ingreidents by function op.normalize_quantity()
-        dish: dict return value Dish.build()
-        servings: int 
-            servings which you want to convert
-        default_servings: int
-            ex:
-            data = load_json(src_path)
-            default_servings = data['ingredients']['食材'].split('人')[0]
-
-    Output:
-        dict: multiplied ingredients
-    """
-
-    if servings == default_servings:
-        ingredients = dish['ingredients']
-
-        return ingredients
-    else:
-        params = op.multiply_quantity(dish, norm, servings)
-        multi = op.Multiplier(dish, params)
-        ingredients = multi.build()
-
-        return ingredients
 
 
 def load_json(filepath: str) -> Dict:

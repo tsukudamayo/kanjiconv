@@ -56,65 +56,99 @@ def main():
     servings = 4
     multiplier = 2
 
-    f = file_list[0]
+    f = file_list[6]
     src_path = os.path.join('./test_data', f)
     with open(src_path, 'r', encoding='utf-8') as r:
         data = json.load(r)
     print(data)
     instructions = fetch_instruction(data)
     print(instructions)
-    sample = instructions[0]
-    print(sample)
-    sentence = sample['description']
-    print(sentence)
-    is_decimal = [s.isdecimal() for s in sentence]
-    print(is_decimal)
-    convert_sentence = ''
-    for idx, (s, d) in enumerate(zip(sentence, is_decimal)):
-        print(idx, s, d)
-        if d:
-            decimal_flg = False
-            print('idx : ', idx)
-            forward = sentence[idx-(quantity_length):idx]
-            backward = sentence[idx+1:idx+(quantity_length+1)]
-            print(forward)
-            print(backward)
-            forward_candidate = ''
-            for i in range(1, (quantity_length+1)):
-                if forward_candidate in quantity_set:
-                    decimal = int(s) / servings * multiplier
-                    decimal_flg = True
-                    zenkaku = jaconv.h2z(str(decimal), digit=True)
-                    convert_sentence += zenkaku
-                    break
-                que = forward[-i]
-                forward_candidate = que + forward_candidate
-                print('forward_candidate')
-                print(forward_candidate)
-            if decimal_flg:
-                pass
-            else:
-                backward_candidate = ''
-                for i in range(quantity_length - 1):
-                    print(i)
-                    if backward_candidate in quantity_set:
+    all_sentences = []
+    all_converts = []
+    for sample in instructions:
+        print(sample)
+        sentence = sample['description']
+
+        is_decimal = [s.isdecimal() for s in sentence]
+        # print(is_decimal)
+        convert_sentence = ''
+        sentence_length = len(sentence)
+        for idx, (s, d) in enumerate(zip(sentence, is_decimal)):
+            print(idx, s, d)
+            if d:
+                decimal_flg = False
+                print('idx : ', idx)
+                print('idx-quantity_length : ', sentence[idx-quantity_length])
+                if (idx - quantity_length) > 0:
+                    foward_range = idx - quantity_length
+                else:
+                    foward_range = 0
+                if (idx + quantity_length) > len(sentence):
+                    backward_range = len(sentence)
+                else:
+                    backward_range = idx + quantity_length
+
+                forward = sentence[foward_range:idx]
+                backward = sentence[idx+1:idx+(quantity_length+1)]
+                print('foraward : ', forward)
+                print('backward : ', backward)
+                forward_candidate = ''
+                for i in range(1, (quantity_length+1)):
+                    print('i : ', i)
+                    print('foward_candidate : ', forward_candidate)
+                    if forward_candidate in quantity_set:
                         decimal = int(s) / servings * multiplier
+                        if decimal.is_integer():
+                            decimal = int(decimal)
                         decimal_flg = True
                         zenkaku = jaconv.h2z(str(decimal), digit=True)
                         convert_sentence += zenkaku
                         break
                     try:
-                        que = backward[i]
+                        que = forward[-i]
+                        print('que')
+                        print(que)
+                        forward_candidate = que + forward_candidate
                     except IndexError:
-                        break
-                    forward_candidate = forward_candidate + que
-                    print('backward_candidate')
-                    print(backward_candidate)
-            if not decimal_flg:
+                        pass
+
+                if decimal_flg:
+                    pass
+                else:
+                    backward_candidate = ''
+                    for i in range(quantity_length - 1):
+                        print(i)
+                        if backward_candidate in quantity_set:
+                            decimal = int(s) / servings * multiplier
+                            if decimal.is_integer():
+                                decimal = int(decimal)
+                            decimal_flg = True
+                            zenkaku = jaconv.h2z(str(decimal), digit=True)
+                            convert_sentence += zenkaku
+                            break
+                        try:
+                            que = backward[i]
+                            print('que')
+                            print(que)
+                            backward_candidate = backward_candidate + que
+                            print('backward_candidate')
+                            print(backward_candidate)                            
+                        except IndexError:
+                            pass
+
+                if not decimal_flg:
+                    convert_sentence += s
+            else:
                 convert_sentence += s
-        else:
-            convert_sentence += s
-    print(convert_sentence)
+        print('sentence : ', sentence)
+        all_sentences.append(sentence)
+        print('convert : ' ,convert_sentence)
+        all_converts.append(convert_sentence)
+    print('sentence')
+    print(all_sentences)
+    print('convert')
+    print(all_converts)
+    
     
 
 if __name__ == '__main__':
