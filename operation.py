@@ -1,8 +1,10 @@
+import os
+import json
 import re
 import regex
 import subprocess
 import itertools
-from typing import Dict, List, Any
+from typing import Dict, List, Set, Any
 from fractions import Fraction
 
 import jaconv
@@ -78,6 +80,8 @@ class Multiplier:
         src_ingredients = self.template['ingredients']
         str_multi_params = [[str(i) for i in p] for p in self.params]
         join_strings = [self.join_quantity_and_number(i) for i in str_multi_params]
+        print('join_strings')
+        print(join_strings)
         self.queue = join_strings
         convert_ingredients = [list(self.dict_to_zenkaku(i)) for i in src_ingredients]
         convert_ingredients = list(itertools.chain.from_iterable(convert_ingredients))
@@ -85,10 +89,49 @@ class Multiplier:
         return convert_ingredients
 
     def join_quantity_and_number(self, strings_array: List) -> str:
+        print('join_quantity_and_number/strings_array', strings_array)
+        types_array = [define_input_type(s) for s in strings_array]
+        print('join_quantity_and_number/types_array', types_array)
+        nonstr_idx = []
+        for idx, (s, t) in enumerate(zip(strings_array, types_array)):
+            if t != 'strings':
+                nonstr_idx.append(idx)
+        print('nonstr_idx')
+        print(nonstr_idx)
+
         if strings_array[0] == strings_array[1]:
             return strings_array[0]
+        elif len(nonstr_idx) > 1:
+            start = nonstr_idx[0]
+            end = nonstr_idx[1] + 1
+            return self.join_and_compute_fraction(strings_array, start, end)
         else:
             return ''.join(strings_array)
+
+    def join_and_compute_fraction(self, strings_array: List, start: int, end: int) -> str:
+        numerical_part = strings_array[start:end]
+        print('numercal_part')
+        print(numerical_part)
+        del strings_array[start:end]
+        quantity_part = strings_array
+        if '～' in numerical_part:
+            result = ''.join(numerical_part)
+        else:
+            print('0')
+            print(numerical_part[0])
+            print('1')
+            print(numerical_part[-1])
+            result = str(Fraction(numerical_part[0]) + Fraction(numerical_part[-1]))
+            print('result')
+            print(result)
+
+        if start == 0:
+            quantity_part.insert(0, result)
+        else:
+            quantity_part.append(result)
+
+        return ''.join(quantity_part)
+ 
 
     def dict_to_zenkaku(self, ingredients: Dict) -> List:
         # TODO TEST
@@ -178,6 +221,8 @@ def operation_by_type(types: str, strings: str, division: Any) -> Any:
 
     
 def define_input_type(strings: str) -> str:
+    print('strings')
+    print(strings)
     symbol_pattern = re.compile('[()~]')
     kanji_pattern = regex.compile(r'\p{Script=Han}+')
     symbol = re.search(symbol_pattern, strings)
@@ -240,6 +285,11 @@ def aggregate_quantities(dic: Dict) -> str:
         yield quantity_text
 
 
+def aggregate_description(dic: Dict) -> str:
+    instruction = dic['description']
+    yield instruction
+
+
 def dict_to_hankaku(zenkaku_dict: Dict) -> Dict:
     if 'items' in zenkaku_dict:
         items_value = zenkaku_dict['items']
@@ -274,25 +324,347 @@ def define_output_type(words: List) -> str:
     else:
         return 'real'
 
-
+# TODO test bug fraction to float
 def operation_by_output_type(quantity_type: str, word_type:str, strings: str,  multiplier: Any) -> List:
+    # print('quantity_type : ', quantity_type)
+    # print('word_type : ', word_type)
+    # print('strings : ' ,strings)
+    # print('multiplier : ', multiplier)
     if not strings:
         return 'null'
     if quantity_type == 'fraction':
         if word_type == 'strings':
+            # print('fraction/strings')
             return strings
         else:
-            return Fraction(strings) * multiplier
+            fr = Fraction(strings) * multiplier
+            return fr.limit_denominator(5)
     elif quantity_type == 'real':
         if word_type == 'strings':
+            # print('real/strings')
             return strings
+        elif word_type == 'fraction':
+            fr = Fraction(strings) * multiplier
+            return fr.limit_denominator(5)
         else:
+            # print('real/else')
             if (float(strings) * multiplier).is_integer():
                 return int(float(strings) * multiplier)
             else:
-                return float(strings) * multiplier
+                return round((float(strings) * multiplier), 1)
     elif quantity_type == 'null':
         return 'null'
+
+
+# ----------- #
+# Instruction #
+# ----------- #
+def fetch_nest_value(data: Dict) -> List:
+    for k, v in data.items():
+        if isinstance(v, dict):
+            yield from fetch_nest_value(v)
+        else:
+            yield v
+
+
+def fetch_all_words_in_ingredients():
+    quantity_list = []
+    file_list = sorted(os.listdir('./test_data/betterhome_recipe'))
+    for f in file_list:
+        src_path = os.path.join('./test_data/betterhome_recipe', f)
+        if not src_path.endswith('.json'):
+            continue
+        with open(src_path, 'r', encoding='utf-8') as r:
+            data = json.load(r)
+        values = list(fetch_nest_value(data['ingredients']))
+        candidate_borders = [candidate_border(v) for v in values]
+        separate_quantities = [list(separate_quantity(v, b))
+                               for v, b
+                               in zip(values, candidate_borders)]
+        flatten = list(itertools.chain.from_iterable(separate_quantities))
+        only_quantity = [s for s in flatten if s.isalpha()]
+        quantity_list.extend(only_quantity)
+
+    quantity_set = set(quantity_list)
+    # print('quantity_set')
+    # print(quantity_set)
+    quantity_length = max([len(q) for q in list(quantity_set)])
+    # print('quantity_length')
+    # print(quantity_length)
+
+    return quantity_set, quantity_length
+
+
+def convert_instructions(data: Dict, servings: int, multiplier: int,
+                         quantity_set: Set, quantity_length: int) -> List:
+
+    def fetch_instruction(data: Dict) -> List:
+        target = data['recipe']
+        strings = target.split('\n')
+        null_check = [s for s in strings if s]
+        
+        return [{"steps": idx+1, "description": s} for idx, s in enumerate(null_check)]
+
+    def _join_quantity_and_number(strings_array: List) -> str:
+        print('join_quantity_and_number/strings_array', strings_array)
+        types_array = [define_input_type(s) for s in strings_array]
+        print('join_quantity_and_number/types_array', types_array)
+        nonstr_idx = []
+        for idx, (s, t) in enumerate(zip(strings_array, types_array)):
+            if t != 'strings':
+                nonstr_idx.append(idx)
+        print('nonstr_idx')
+        print(nonstr_idx)
+
+        if strings_array[0] == strings_array[1]:
+            return strings_array[0]
+        elif len(nonstr_idx) > 1:
+            start = nonstr_idx[0]
+            end = nonstr_idx[1] + 1
+            return _join_and_compute_fraction(strings_array, start, end)
+        else:
+            return ''.join(strings_array)
+
+
+    def _join_and_compute_fraction(strings_array: List, start: int, end: int) -> str:
+        numerical_part = strings_array[start:end]
+        print('numercal_part')
+        print(numerical_part)
+        del strings_array[start:end]
+        quantity_part = strings_array
+        if '～' in numerical_part:
+            result = ''.join(numerical_part)
+        else:
+            print('0')
+            print(numerical_part[0])
+            print('1')
+            print(numerical_part[-1])
+            result = str(Fraction(numerical_part[0]) + Fraction(numerical_part[-1]))
+            print('result')
+            print(result)
+
+        if start == 0:
+            quantity_part.insert(0, result)
+        else:
+            quantity_part.append(result)
+
+        return ''.join(quantity_part)
+    
+    instructions = fetch_instruction(data)
+    # print(instructions)
+    all_sentences = []
+    all_converts = []
+    decimal_flg = False
+
+    hankaku_instructions = [list(dict_to_hankaku(i)) for i in instructions]
+    hankaku_instructions = list(itertools.chain.from_iterable(hankaku_instructions))
+    descriptions = [list(aggregate_description(i)) for i in hankaku_instructions]
+    descriptions = list(itertools.chain.from_iterable(descriptions))
+    candidate_borders = [candidate_border(q) for q in descriptions]
+    separate_quantities = [list(separate_quantity(q, b)) for q, b in zip(descriptions, candidate_borders)]
+    separate_quantities = list(itertools.chain.from_iterable(separate_quantities))
+    process_fraction = list(itertools.chain.from_iterable(_join_quantity_and_number(separate_quantities)))
+    string_types = [[define_input_type(w) for w in s] for s in process_fraction]
+
+    print('process_fraction')
+    print(process_fraction)
+
+    for sentence_array, string_type_array in zip(process_fraction, string_types):
+        # print('sentences_array')
+        # print(sentence_array)
+        # print('string_type_array')
+        # print(string_type_array)
+
+        convert_sentence = ''
+        sentence_length = len(sentence_array)
+        for idx, (s, t) in enumerate(zip(sentence_array, string_type_array)):
+            decimal_flg = False
+            # print('****************')
+            # print('s')
+            # print(s)
+            # print('t')
+            # print(t)
+            # print('****************')
+
+            if t == 'real':
+                # print('idx : ', idx)
+                # print('idx-quantity_length : ', sentence[idx-quantity_length])
+                try:
+                    forward = sentence_array[idx - 1]
+                    backward = sentence_array[idx + 1]
+                except IndexError:
+                    continue
+                print('s : ', s)
+                print('foraward : ', forward)
+                print('backward : ', backward)
+
+                # ------- #
+                # forward #
+                # ------- #
+                forward_candidate = ''
+                for i in range(1, (quantity_length+1)):
+                    if forward_candidate in quantity_set:
+                        decimal = int(s) / servings * multiplier
+                        if decimal.is_integer():
+                            decimal = int(decimal)
+                            zenkaku = jaconv.h2z(str(decimal), digit=True)
+                            convert_sentence += zenkaku
+                            decimal_flg = True
+                            break
+                        try:
+                            que = forward[-i]
+                            # print('que')
+                            # print(que)
+                            forward_candidate = que + forward_candidate
+                        except IndexError:
+                            pass
+                if decimal_flg:
+                    pass
+                else:
+                    backward_candidate = ''
+                    for i in range(quantity_length - 1):
+                        # print(i)
+                        if backward_candidate in quantity_set:
+                            decimal = int(s) / servings * multiplier
+                            if decimal.is_integer():
+                                decimal = int(decimal)
+                            decimal_flg = True
+                            zenkaku = jaconv.h2z(str(decimal), digit=True)
+                            # print('backward/zenkaku')
+                            convert_sentence += zenkaku
+                            # print(zenkaku)
+                            # print(convert_sentence)
+                            break
+                        try:
+                            que = backward[i]
+                            # print('que')
+                            # print(que)
+                            backward_candidate = backward_candidate + que
+                            # print('backward_candidate')
+                            # print(backward_candidate)
+                        except IndexError:
+                            pass
+    
+                if not decimal_flg:
+                    convert_sentence += jaconv.h2z(str(s), digit=True)
+            else:
+                # print('not decimal_flg')
+                convert_sentence += s
+        all_sentences.append(sentence_array)
+        all_converts.append(convert_sentence)
+    print(all_sentences)
+    print(all_converts)
+
+    return all_converts
+                    
+                
+            # if t == 'real':
+            #     if (idx - sentence_length) > 0:
+            #         forward_range = idx - len(s)
+            #     else:
+            #         foward_range = 0
+            #     if (idx + quantity_length) > len(s):
+            #         backward_range = len(s)
+            #     else:
+            #         backward_range = idx + len(s)
+   
+    
+    # for sample in instructions:
+    #     # print(sample)
+    #     sentence = sample['description']
+    #     is_decimal = [s.isdecimal() for s in sentence]
+    #     # print(is_decimal)
+    #     convert_sentence = ''
+    #     sentence_length = len(sentence)
+    #     for idx, (s, d) in enumerate(zip(sentence, is_decimal)):
+    #         decimal_flg = False
+    #         # print(idx, s, d)
+    #         if d:
+    #             # ----- #
+    #             # range #
+    #             # ----- #
+    #             # print('idx : ', idx)
+    #             # print('idx-quantity_length : ', sentence[idx-quantity_length])
+    #             if (idx - quantity_length) > 0:
+    #                 foward_range = idx - quantity_length
+    #             else:
+    #                 foward_range = 0
+    #             if (idx + quantity_length) > len(sentence):
+    #                 backward_range = len(sentence)
+    #             else:
+    #                 backward_range = idx + quantity_length
+    #             forward = sentence[foward_range:idx]
+    #             backward = sentence[idx+1:idx+(quantity_length+1)]
+    #             # print('foraward : ', forward)
+    #             # print('backward : ', backward)
+    
+    #             forward_candidate = ''
+    #             for i in range(1, (quantity_length+1)):
+    #                 # print('decimal_flg : ', decimal_flg)
+    #                 # print(s)
+    #                 # print('forward_candidate', forward_candidate)
+    #                 # print('forward_candidate in quantity_set : ', forward_candidate in quantity_set)
+    #                 # print(forward_candidate in quantity_set)
+    #                 # print('convert_sentence : ', convert_sentence)
+    #                 # print('i : ', i)
+    #                 # print('foward_candidate : ', forward_candidate)
+    #                 if forward_candidate in quantity_set:
+    #                     decimal = int(s) / servings * multiplier
+    #                     if decimal.is_integer():
+    #                         decimal = int(decimal)
+    #                     decimal_flg = True
+    #                     zenkaku = jaconv.h2z(str(decimal), digit=True)
+    #                     # print('forward/zenkaku')
+    #                     convert_sentence += zenkaku
+    #                     # print(zenkaku)
+    #                     # print(convert_sentence)
+    #                     break
+    #                 try:
+    #                     que = forward[-i]
+    #                     # print('que')
+    #                     # print(que)
+    #                     forward_candidate = que + forward_candidate
+    #                 except IndexError:
+    #                     pass
+    
+    #             if decimal_flg:
+    #                 pass
+    #             else:
+    #                 backward_candidate = ''
+    #                 for i in range(quantity_length - 1):
+    #                     # print(i)
+    #                     if backward_candidate in quantity_set:
+    #                         decimal = int(s) / servings * multiplier
+    #                         if decimal.is_integer():
+    #                             decimal = int(decimal)
+    #                         decimal_flg = True
+    #                         zenkaku = jaconv.h2z(str(decimal), digit=True)
+    #                         # print('backward/zenkaku')
+    #                         convert_sentence += zenkaku
+    #                         # print(zenkaku)
+    #                         # print(convert_sentence)
+    #                         break
+    #                     try:
+    #                         que = backward[i]
+    #                         # print('que')
+    #                         # print(que)
+    #                         backward_candidate = backward_candidate + que
+    #                         # print('backward_candidate')
+    #                         # print(backward_candidate)
+    #                     except IndexError:
+    #                         pass
+    
+    #             if not decimal_flg:
+    #                 convert_sentence += s
+    #         else:
+    #             # print('not decimal_flg')
+    #             convert_sentence += s
+    #     all_sentences.append(sentence)
+    #     all_converts.append(convert_sentence)
+    # print(all_sentences)
+    # print(all_converts)
+
+    # return all_converts
       
 
 # ---- #

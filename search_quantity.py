@@ -56,7 +56,7 @@ def main():
     servings = 4
     multiplier = 2
 
-    f = file_list[6]
+    f = file_list[1]
     src_path = os.path.join('./test_data', f)
     with open(src_path, 'r', encoding='utf-8') as r:
         data = json.load(r)
@@ -65,6 +65,7 @@ def main():
     print(instructions)
     all_sentences = []
     all_converts = []
+    decimal_flg = False
     for sample in instructions:
         print(sample)
         sentence = sample['description']
@@ -74,9 +75,12 @@ def main():
         convert_sentence = ''
         sentence_length = len(sentence)
         for idx, (s, d) in enumerate(zip(sentence, is_decimal)):
+            decimal_flg = False
             print(idx, s, d)
             if d:
-                decimal_flg = False
+                # ----- #
+                # range #
+                # ----- #
                 print('idx : ', idx)
                 print('idx-quantity_length : ', sentence[idx-quantity_length])
                 if (idx - quantity_length) > 0:
@@ -87,22 +91,31 @@ def main():
                     backward_range = len(sentence)
                 else:
                     backward_range = idx + quantity_length
-
                 forward = sentence[foward_range:idx]
                 backward = sentence[idx+1:idx+(quantity_length+1)]
                 print('foraward : ', forward)
                 print('backward : ', backward)
+
                 forward_candidate = ''
                 for i in range(1, (quantity_length+1)):
-                    print('i : ', i)
-                    print('foward_candidate : ', forward_candidate)
+                    print('decimal_flg : ', decimal_flg)
+                    print(s)
+                    print('forward_candidate', forward_candidate)
+                    print('forward_candidate in quantity_set : ', forward_candidate in quantity_set)
+                    print(forward_candidate in quantity_set)
+                    # print('convert_sentence : ', convert_sentence)
+                    # print('i : ', i)
+                    # print('foward_candidate : ', forward_candidate)
                     if forward_candidate in quantity_set:
                         decimal = int(s) / servings * multiplier
                         if decimal.is_integer():
                             decimal = int(decimal)
                         decimal_flg = True
                         zenkaku = jaconv.h2z(str(decimal), digit=True)
+                        # print('forward/zenkaku')
                         convert_sentence += zenkaku
+                        # print(zenkaku)
+                        # print(convert_sentence)
                         break
                     try:
                         que = forward[-i]
@@ -124,21 +137,31 @@ def main():
                                 decimal = int(decimal)
                             decimal_flg = True
                             zenkaku = jaconv.h2z(str(decimal), digit=True)
+                            # print('backward/zenkaku')
                             convert_sentence += zenkaku
+                            # print(zenkaku)
+                            # print(convert_sentence)
                             break
                         try:
                             que = backward[i]
                             print('que')
                             print(que)
                             backward_candidate = backward_candidate + que
-                            print('backward_candidate')
-                            print(backward_candidate)                            
+                            # print('backward_candidate')
+                            # print(backward_candidate)
                         except IndexError:
                             pass
+                        
 
+                if decimal_flg:
+                    print('decimal_flg is True')
+                    print(s)
                 if not decimal_flg:
+                    print('not decimal_flg')
+                    print(s)
                     convert_sentence += s
             else:
+                print('not decimal_flg')
                 convert_sentence += s
         print('sentence : ', sentence)
         all_sentences.append(sentence)

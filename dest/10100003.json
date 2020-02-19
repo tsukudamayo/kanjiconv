@@ -25,7 +25,7 @@
                         "ingredients": [
                             {
                                 "description": "かぶ",
-                                "quantityText": "中４個（３５０ｇ）"
+                                "quantityText": "中ｇ）３５４"
                             },
                             {
                                 "description": "Ａ",
@@ -37,7 +37,7 @@
                                     },
                                     {
                                         "description": "砂糖",
-                                        "quantityText": "小さじ１／２と１／４"
+                                        "quantityText": "小さじ３／４"
                                     },
                                     {
                                         "description": "しょうゆ",
@@ -165,27 +165,1219 @@
                 "instructions": [
                     {
                         "step": 1,
-                        "description": "かぶは皮をむき、４～６つに切ります。"
+                        "description": "か"
                     },
                     {
                         "step": 2,
-                        "description": "鍋にＡとかぶを入れ、落としぶたをして、やわらかくなるまで、弱火で煮ます。"
+                        "description": "ぶ"
                     },
                     {
                         "step": 3,
-                        "description": "かたくり粉を水大さじ１でといておきます。"
+                        "description": "は"
                     },
                     {
                         "step": 4,
-                        "description": "しょうがは皮をむき、薄く切って細いせん切りにして水にさらします（針しょうが）。"
+                        "description": "皮"
                     },
                     {
                         "step": 5,
-                        "description": "（２）の火を止めてかぶをとり出し、煮汁に、ひき肉とＢを入れて肉をよくほぐし、弱火にかけます。"
+                        "description": "を"
                     },
                     {
                         "step": 6,
-                        "description": "肉に火が通ったら、（３）でとろみをつけ、かぶをもどします。かぶが温まったら、器にとります。（５）のそぼろあんをかけ、針しょうがを上に飾ります。"
+                        "description": "む"
+                    },
+                    {
+                        "step": 7,
+                        "description": "き"
+                    },
+                    {
+                        "step": 8,
+                        "description": ""
+                    },
+                    {
+                        "step": 9,
+                        "description": "つ"
+                    },
+                    {
+                        "step": 10,
+                        "description": "に"
+                    },
+                    {
+                        "step": 11,
+                        "description": "切"
+                    },
+                    {
+                        "step": 12,
+                        "description": "り"
+                    },
+                    {
+                        "step": 13,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 14,
+                        "description": "す"
+                    },
+                    {
+                        "step": 15,
+                        "description": ""
+                    },
+                    {
+                        "step": 16,
+                        "description": "鍋"
+                    },
+                    {
+                        "step": 17,
+                        "description": "に"
+                    },
+                    {
+                        "step": 18,
+                        "description": "A"
+                    },
+                    {
+                        "step": 19,
+                        "description": "と"
+                    },
+                    {
+                        "step": 20,
+                        "description": "か"
+                    },
+                    {
+                        "step": 21,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 22,
+                        "description": "を"
+                    },
+                    {
+                        "step": 23,
+                        "description": "入"
+                    },
+                    {
+                        "step": 24,
+                        "description": "れ"
+                    },
+                    {
+                        "step": 25,
+                        "description": ""
+                    },
+                    {
+                        "step": 26,
+                        "description": "落"
+                    },
+                    {
+                        "step": 27,
+                        "description": "と"
+                    },
+                    {
+                        "step": 28,
+                        "description": "し"
+                    },
+                    {
+                        "step": 29,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 30,
+                        "description": "た"
+                    },
+                    {
+                        "step": 31,
+                        "description": "を"
+                    },
+                    {
+                        "step": 32,
+                        "description": "し"
+                    },
+                    {
+                        "step": 33,
+                        "description": "て"
+                    },
+                    {
+                        "step": 34,
+                        "description": ""
+                    },
+                    {
+                        "step": 35,
+                        "description": "や"
+                    },
+                    {
+                        "step": 36,
+                        "description": "わ"
+                    },
+                    {
+                        "step": 37,
+                        "description": "ら"
+                    },
+                    {
+                        "step": 38,
+                        "description": "か"
+                    },
+                    {
+                        "step": 39,
+                        "description": "く"
+                    },
+                    {
+                        "step": 40,
+                        "description": "な"
+                    },
+                    {
+                        "step": 41,
+                        "description": "る"
+                    },
+                    {
+                        "step": 42,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 43,
+                        "description": "で"
+                    },
+                    {
+                        "step": 44,
+                        "description": ""
+                    },
+                    {
+                        "step": 45,
+                        "description": "弱"
+                    },
+                    {
+                        "step": 46,
+                        "description": "火"
+                    },
+                    {
+                        "step": 47,
+                        "description": "で"
+                    },
+                    {
+                        "step": 48,
+                        "description": "煮"
+                    },
+                    {
+                        "step": 49,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 50,
+                        "description": "す"
+                    },
+                    {
+                        "step": 51,
+                        "description": ""
+                    },
+                    {
+                        "step": 52,
+                        "description": "鍋"
+                    },
+                    {
+                        "step": 53,
+                        "description": "に"
+                    },
+                    {
+                        "step": 54,
+                        "description": "A"
+                    },
+                    {
+                        "step": 55,
+                        "description": "と"
+                    },
+                    {
+                        "step": 56,
+                        "description": "か"
+                    },
+                    {
+                        "step": 57,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 58,
+                        "description": "を"
+                    },
+                    {
+                        "step": 59,
+                        "description": "入"
+                    },
+                    {
+                        "step": 60,
+                        "description": "れ"
+                    },
+                    {
+                        "step": 61,
+                        "description": ""
+                    },
+                    {
+                        "step": 62,
+                        "description": "落"
+                    },
+                    {
+                        "step": 63,
+                        "description": "と"
+                    },
+                    {
+                        "step": 64,
+                        "description": "し"
+                    },
+                    {
+                        "step": 65,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 66,
+                        "description": "た"
+                    },
+                    {
+                        "step": 67,
+                        "description": "を"
+                    },
+                    {
+                        "step": 68,
+                        "description": "し"
+                    },
+                    {
+                        "step": 69,
+                        "description": "て"
+                    },
+                    {
+                        "step": 70,
+                        "description": ""
+                    },
+                    {
+                        "step": 71,
+                        "description": "や"
+                    },
+                    {
+                        "step": 72,
+                        "description": "わ"
+                    },
+                    {
+                        "step": 73,
+                        "description": "ら"
+                    },
+                    {
+                        "step": 74,
+                        "description": "か"
+                    },
+                    {
+                        "step": 75,
+                        "description": "く"
+                    },
+                    {
+                        "step": 76,
+                        "description": "な"
+                    },
+                    {
+                        "step": 77,
+                        "description": "る"
+                    },
+                    {
+                        "step": 78,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 79,
+                        "description": "で"
+                    },
+                    {
+                        "step": 80,
+                        "description": ""
+                    },
+                    {
+                        "step": 81,
+                        "description": "弱"
+                    },
+                    {
+                        "step": 82,
+                        "description": "火"
+                    },
+                    {
+                        "step": 83,
+                        "description": "で"
+                    },
+                    {
+                        "step": 84,
+                        "description": "煮"
+                    },
+                    {
+                        "step": 85,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 86,
+                        "description": "す"
+                    },
+                    {
+                        "step": 87,
+                        "description": ""
+                    },
+                    {
+                        "step": 88,
+                        "description": "か"
+                    },
+                    {
+                        "step": 89,
+                        "description": "た"
+                    },
+                    {
+                        "step": 90,
+                        "description": "く"
+                    },
+                    {
+                        "step": 91,
+                        "description": "り"
+                    },
+                    {
+                        "step": 92,
+                        "description": "粉"
+                    },
+                    {
+                        "step": 93,
+                        "description": "を"
+                    },
+                    {
+                        "step": 94,
+                        "description": "水"
+                    },
+                    {
+                        "step": 95,
+                        "description": "大"
+                    },
+                    {
+                        "step": 96,
+                        "description": "さ"
+                    },
+                    {
+                        "step": 97,
+                        "description": "じ"
+                    },
+                    {
+                        "step": 98,
+                        "description": ""
+                    },
+                    {
+                        "step": 99,
+                        "description": "で"
+                    },
+                    {
+                        "step": 100,
+                        "description": "と"
+                    },
+                    {
+                        "step": 101,
+                        "description": "い"
+                    },
+                    {
+                        "step": 102,
+                        "description": "て"
+                    },
+                    {
+                        "step": 103,
+                        "description": "お"
+                    },
+                    {
+                        "step": 104,
+                        "description": "き"
+                    },
+                    {
+                        "step": 105,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 106,
+                        "description": "す"
+                    },
+                    {
+                        "step": 107,
+                        "description": ""
+                    },
+                    {
+                        "step": 108,
+                        "description": "し"
+                    },
+                    {
+                        "step": 109,
+                        "description": "ょ"
+                    },
+                    {
+                        "step": 110,
+                        "description": "う"
+                    },
+                    {
+                        "step": 111,
+                        "description": "が"
+                    },
+                    {
+                        "step": 112,
+                        "description": "は"
+                    },
+                    {
+                        "step": 113,
+                        "description": "皮"
+                    },
+                    {
+                        "step": 114,
+                        "description": "を"
+                    },
+                    {
+                        "step": 115,
+                        "description": "む"
+                    },
+                    {
+                        "step": 116,
+                        "description": "き"
+                    },
+                    {
+                        "step": 117,
+                        "description": ""
+                    },
+                    {
+                        "step": 118,
+                        "description": "薄"
+                    },
+                    {
+                        "step": 119,
+                        "description": "く"
+                    },
+                    {
+                        "step": 120,
+                        "description": "切"
+                    },
+                    {
+                        "step": 121,
+                        "description": "っ"
+                    },
+                    {
+                        "step": 122,
+                        "description": "て"
+                    },
+                    {
+                        "step": 123,
+                        "description": "細"
+                    },
+                    {
+                        "step": 124,
+                        "description": "い"
+                    },
+                    {
+                        "step": 125,
+                        "description": "せ"
+                    },
+                    {
+                        "step": 126,
+                        "description": "ん"
+                    },
+                    {
+                        "step": 127,
+                        "description": "切"
+                    },
+                    {
+                        "step": 128,
+                        "description": "り"
+                    },
+                    {
+                        "step": 129,
+                        "description": "に"
+                    },
+                    {
+                        "step": 130,
+                        "description": "し"
+                    },
+                    {
+                        "step": 131,
+                        "description": "て"
+                    },
+                    {
+                        "step": 132,
+                        "description": "水"
+                    },
+                    {
+                        "step": 133,
+                        "description": "に"
+                    },
+                    {
+                        "step": 134,
+                        "description": "さ"
+                    },
+                    {
+                        "step": 135,
+                        "description": "ら"
+                    },
+                    {
+                        "step": 136,
+                        "description": "し"
+                    },
+                    {
+                        "step": 137,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 138,
+                        "description": "す"
+                    },
+                    {
+                        "step": 139,
+                        "description": "("
+                    },
+                    {
+                        "step": 140,
+                        "description": "針"
+                    },
+                    {
+                        "step": 141,
+                        "description": "し"
+                    },
+                    {
+                        "step": 142,
+                        "description": "ょ"
+                    },
+                    {
+                        "step": 143,
+                        "description": "う"
+                    },
+                    {
+                        "step": 144,
+                        "description": "が"
+                    },
+                    {
+                        "step": 145,
+                        "description": ")"
+                    },
+                    {
+                        "step": 146,
+                        "description": ""
+                    },
+                    {
+                        "step": 147,
+                        "description": "し"
+                    },
+                    {
+                        "step": 148,
+                        "description": "ょ"
+                    },
+                    {
+                        "step": 149,
+                        "description": "う"
+                    },
+                    {
+                        "step": 150,
+                        "description": "が"
+                    },
+                    {
+                        "step": 151,
+                        "description": "は"
+                    },
+                    {
+                        "step": 152,
+                        "description": "皮"
+                    },
+                    {
+                        "step": 153,
+                        "description": "を"
+                    },
+                    {
+                        "step": 154,
+                        "description": "む"
+                    },
+                    {
+                        "step": 155,
+                        "description": "き"
+                    },
+                    {
+                        "step": 156,
+                        "description": ""
+                    },
+                    {
+                        "step": 157,
+                        "description": "薄"
+                    },
+                    {
+                        "step": 158,
+                        "description": "く"
+                    },
+                    {
+                        "step": 159,
+                        "description": "切"
+                    },
+                    {
+                        "step": 160,
+                        "description": "っ"
+                    },
+                    {
+                        "step": 161,
+                        "description": "て"
+                    },
+                    {
+                        "step": 162,
+                        "description": "細"
+                    },
+                    {
+                        "step": 163,
+                        "description": "い"
+                    },
+                    {
+                        "step": 164,
+                        "description": "せ"
+                    },
+                    {
+                        "step": 165,
+                        "description": "ん"
+                    },
+                    {
+                        "step": 166,
+                        "description": "切"
+                    },
+                    {
+                        "step": 167,
+                        "description": "り"
+                    },
+                    {
+                        "step": 168,
+                        "description": "に"
+                    },
+                    {
+                        "step": 169,
+                        "description": "し"
+                    },
+                    {
+                        "step": 170,
+                        "description": "て"
+                    },
+                    {
+                        "step": 171,
+                        "description": "水"
+                    },
+                    {
+                        "step": 172,
+                        "description": "に"
+                    },
+                    {
+                        "step": 173,
+                        "description": "さ"
+                    },
+                    {
+                        "step": 174,
+                        "description": "ら"
+                    },
+                    {
+                        "step": 175,
+                        "description": "し"
+                    },
+                    {
+                        "step": 176,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 177,
+                        "description": "す"
+                    },
+                    {
+                        "step": 178,
+                        "description": "("
+                    },
+                    {
+                        "step": 179,
+                        "description": "針"
+                    },
+                    {
+                        "step": 180,
+                        "description": "し"
+                    },
+                    {
+                        "step": 181,
+                        "description": "ょ"
+                    },
+                    {
+                        "step": 182,
+                        "description": "う"
+                    },
+                    {
+                        "step": 183,
+                        "description": "が"
+                    },
+                    {
+                        "step": 184,
+                        "description": ")"
+                    },
+                    {
+                        "step": 185,
+                        "description": ""
+                    },
+                    {
+                        "step": 186,
+                        "description": "("
+                    },
+                    {
+                        "step": 187,
+                        "description": ""
+                    },
+                    {
+                        "step": 188,
+                        "description": ")"
+                    },
+                    {
+                        "step": 189,
+                        "description": "の"
+                    },
+                    {
+                        "step": 190,
+                        "description": "火"
+                    },
+                    {
+                        "step": 191,
+                        "description": "を"
+                    },
+                    {
+                        "step": 192,
+                        "description": "止"
+                    },
+                    {
+                        "step": 193,
+                        "description": "め"
+                    },
+                    {
+                        "step": 194,
+                        "description": "て"
+                    },
+                    {
+                        "step": 195,
+                        "description": "か"
+                    },
+                    {
+                        "step": 196,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 197,
+                        "description": "を"
+                    },
+                    {
+                        "step": 198,
+                        "description": "と"
+                    },
+                    {
+                        "step": 199,
+                        "description": "り"
+                    },
+                    {
+                        "step": 200,
+                        "description": "出"
+                    },
+                    {
+                        "step": 201,
+                        "description": "し"
+                    },
+                    {
+                        "step": 202,
+                        "description": ""
+                    },
+                    {
+                        "step": 203,
+                        "description": "煮"
+                    },
+                    {
+                        "step": 204,
+                        "description": "汁"
+                    },
+                    {
+                        "step": 205,
+                        "description": "に"
+                    },
+                    {
+                        "step": 206,
+                        "description": ""
+                    },
+                    {
+                        "step": 207,
+                        "description": "ひ"
+                    },
+                    {
+                        "step": 208,
+                        "description": "き"
+                    },
+                    {
+                        "step": 209,
+                        "description": "肉"
+                    },
+                    {
+                        "step": 210,
+                        "description": "と"
+                    },
+                    {
+                        "step": 211,
+                        "description": "B"
+                    },
+                    {
+                        "step": 212,
+                        "description": "を"
+                    },
+                    {
+                        "step": 213,
+                        "description": "入"
+                    },
+                    {
+                        "step": 214,
+                        "description": "れ"
+                    },
+                    {
+                        "step": 215,
+                        "description": "て"
+                    },
+                    {
+                        "step": 216,
+                        "description": "肉"
+                    },
+                    {
+                        "step": 217,
+                        "description": "を"
+                    },
+                    {
+                        "step": 218,
+                        "description": "よ"
+                    },
+                    {
+                        "step": 219,
+                        "description": "く"
+                    },
+                    {
+                        "step": 220,
+                        "description": "ほ"
+                    },
+                    {
+                        "step": 221,
+                        "description": "ぐ"
+                    },
+                    {
+                        "step": 222,
+                        "description": "し"
+                    },
+                    {
+                        "step": 223,
+                        "description": ""
+                    },
+                    {
+                        "step": 224,
+                        "description": "弱"
+                    },
+                    {
+                        "step": 225,
+                        "description": "火"
+                    },
+                    {
+                        "step": 226,
+                        "description": "に"
+                    },
+                    {
+                        "step": 227,
+                        "description": "か"
+                    },
+                    {
+                        "step": 228,
+                        "description": "け"
+                    },
+                    {
+                        "step": 229,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 230,
+                        "description": "す"
+                    },
+                    {
+                        "step": 231,
+                        "description": ""
+                    },
+                    {
+                        "step": 232,
+                        "description": "肉"
+                    },
+                    {
+                        "step": 233,
+                        "description": "に"
+                    },
+                    {
+                        "step": 234,
+                        "description": "火"
+                    },
+                    {
+                        "step": 235,
+                        "description": "が"
+                    },
+                    {
+                        "step": 236,
+                        "description": "通"
+                    },
+                    {
+                        "step": 237,
+                        "description": "っ"
+                    },
+                    {
+                        "step": 238,
+                        "description": "た"
+                    },
+                    {
+                        "step": 239,
+                        "description": "ら"
+                    },
+                    {
+                        "step": 240,
+                        "description": ""
+                    },
+                    {
+                        "step": 241,
+                        "description": "("
+                    },
+                    {
+                        "step": 242,
+                        "description": ""
+                    },
+                    {
+                        "step": 243,
+                        "description": ")"
+                    },
+                    {
+                        "step": 244,
+                        "description": "で"
+                    },
+                    {
+                        "step": 245,
+                        "description": "と"
+                    },
+                    {
+                        "step": 246,
+                        "description": "ろ"
+                    },
+                    {
+                        "step": 247,
+                        "description": "み"
+                    },
+                    {
+                        "step": 248,
+                        "description": "を"
+                    },
+                    {
+                        "step": 249,
+                        "description": "つ"
+                    },
+                    {
+                        "step": 250,
+                        "description": "け"
+                    },
+                    {
+                        "step": 251,
+                        "description": ""
+                    },
+                    {
+                        "step": 252,
+                        "description": "か"
+                    },
+                    {
+                        "step": 253,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 254,
+                        "description": "を"
+                    },
+                    {
+                        "step": 255,
+                        "description": "も"
+                    },
+                    {
+                        "step": 256,
+                        "description": "ど"
+                    },
+                    {
+                        "step": 257,
+                        "description": "し"
+                    },
+                    {
+                        "step": 258,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 259,
+                        "description": "す"
+                    },
+                    {
+                        "step": 260,
+                        "description": ""
+                    },
+                    {
+                        "step": 261,
+                        "description": "か"
+                    },
+                    {
+                        "step": 262,
+                        "description": "ぶ"
+                    },
+                    {
+                        "step": 263,
+                        "description": "が"
+                    },
+                    {
+                        "step": 264,
+                        "description": "温"
+                    },
+                    {
+                        "step": 265,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 266,
+                        "description": "っ"
+                    },
+                    {
+                        "step": 267,
+                        "description": "た"
+                    },
+                    {
+                        "step": 268,
+                        "description": "ら"
+                    },
+                    {
+                        "step": 269,
+                        "description": ""
+                    },
+                    {
+                        "step": 270,
+                        "description": "器"
+                    },
+                    {
+                        "step": 271,
+                        "description": "に"
+                    },
+                    {
+                        "step": 272,
+                        "description": "と"
+                    },
+                    {
+                        "step": 273,
+                        "description": "り"
+                    },
+                    {
+                        "step": 274,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 275,
+                        "description": "す"
+                    },
+                    {
+                        "step": 276,
+                        "description": ""
+                    },
+                    {
+                        "step": 277,
+                        "description": "("
+                    },
+                    {
+                        "step": 278,
+                        "description": ""
+                    },
+                    {
+                        "step": 279,
+                        "description": ")"
+                    },
+                    {
+                        "step": 280,
+                        "description": "の"
+                    },
+                    {
+                        "step": 281,
+                        "description": "そ"
+                    },
+                    {
+                        "step": 282,
+                        "description": "ぼ"
+                    },
+                    {
+                        "step": 283,
+                        "description": "ろ"
+                    },
+                    {
+                        "step": 284,
+                        "description": "あ"
+                    },
+                    {
+                        "step": 285,
+                        "description": "ん"
+                    },
+                    {
+                        "step": 286,
+                        "description": "を"
+                    },
+                    {
+                        "step": 287,
+                        "description": "か"
+                    },
+                    {
+                        "step": 288,
+                        "description": "け"
+                    },
+                    {
+                        "step": 289,
+                        "description": ""
+                    },
+                    {
+                        "step": 290,
+                        "description": "針"
+                    },
+                    {
+                        "step": 291,
+                        "description": "し"
+                    },
+                    {
+                        "step": 292,
+                        "description": "ょ"
+                    },
+                    {
+                        "step": 293,
+                        "description": "う"
+                    },
+                    {
+                        "step": 294,
+                        "description": "が"
+                    },
+                    {
+                        "step": 295,
+                        "description": "を"
+                    },
+                    {
+                        "step": 296,
+                        "description": "上"
+                    },
+                    {
+                        "step": 297,
+                        "description": "に"
+                    },
+                    {
+                        "step": 298,
+                        "description": "飾"
+                    },
+                    {
+                        "step": 299,
+                        "description": "り"
+                    },
+                    {
+                        "step": 300,
+                        "description": "ま"
+                    },
+                    {
+                        "step": 301,
+                        "description": "す"
+                    },
+                    {
+                        "step": 302,
+                        "description": ""
+                    },
+                    {
+                        "step": 303,
+                        "description": ""
+                    },
+                    {
+                        "step": 304,
+                        "description": ""
                     }
                 ]
             },
