@@ -194,12 +194,15 @@ def main():
         if os.path.isfile(dst_path):
             continue
 
-        # import time
-        # time0 = time.time()
-        # # src_path = './test_data/betterhome_recipe/12300010.json'
-        # src_path = './test_data/betterhome_recipe/30800031.json'
-        # dst_path = './dest/30800031.json'
-        
+    # import time
+    # time0 = time.time()
+    # # src_path = './test_data/betterhome_recipe/12300010.json'
+    # src_path = './test_data/betterhome_recipe/30800031.json'
+    # dst_path = './dest/30800031.json'
+
+    # src_path = './test_data/betterhome_recipe/10100006.json'
+    # dst_path = './dest/10100006.json'
+    
         print(load_json(src_path))
         
         try:
@@ -211,7 +214,7 @@ def main():
             print(ingredients_4)
         except ValueError:
             print('Value Error')
-            continue
+            # continue
         
         # ---- #
         # dish #
@@ -231,9 +234,12 @@ def main():
         instruction = instruction_builder.build()
         
         servings = load_json(src_path)
-        servings = int(servings['ingredients']['食材'].split('人')[0])
-        print('servings : ', servings)
-
+        try:
+            servings = int(servings['ingredients']['食材'].split('人')[0])
+            print('servings : ', servings)
+        except ValueError:
+            continue
+        
         ####### XXX ####### ####### XXX ####### ####### XXX #######
         if servings == 4:
             instruction4 = instruction
@@ -278,6 +284,10 @@ def main():
         instruction_servings = []
         instruction_servings.append({"unit": "2人", "instructions": instruction2})
         instruction_servings.append({"unit": "4人", "instructions": instruction4})
+        print('instruction2')
+        print(instruction2)
+        print('instruction4')
+        print(instruction4)
         
         # ------------ #
         # build recipe #
@@ -290,10 +300,9 @@ def main():
         
         time1 = time.time()
         print(time1 - time0)
-
+            
         count += 1
-        if count == 10:
-            break
+        print('############################ {} ####################################'.format(count))
 
 if __name__ == '__main__':
     main()
