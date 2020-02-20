@@ -224,11 +224,11 @@ def operation_by_type(types: str, strings: str, division: Any) -> Any:
     else:
         return strings
 
-    
+# TODO test 11400111.json empty line
 def define_input_type(strings: str) -> str:
     print('strings')
     print(strings)
-    symbol_pattern = re.compile('[()~、]')
+    symbol_pattern = re.compile('[()~、。]')
     kanji_pattern = regex.compile(r'\p{Script=Han}+')
     symbol = re.search(symbol_pattern, strings)
     kanji = kanji_pattern.search(strings)
@@ -506,11 +506,16 @@ def convert_instructions(data: Dict, servings: int, multiplier: int,
     
         return zenkaku
 
+    # TODO test circulating decimal 11600046.json'
     def multiply_parameter(sentences: List, types: List, servings: int, multiplier: int) -> List:
         convert_sentence = ''
+        print('sentences')
+        print(sentences)
+        print('types')
+        print(types)
         for idx, (s, t) in enumerate(zip(sentences, types)):
-            print('s : ', s)
-            print('t : ', t)            
+            # print('s : ', s)
+            # print('t : ', t)            
             convert_flg = False
             if t != 'strings':
                 try:
@@ -520,8 +525,8 @@ def convert_instructions(data: Dict, servings: int, multiplier: int,
                     continue
                 forward_candidate = ''
                 for i in range(1, quantity_length + 1):
-                    print('convert_sentence')
-                    print(convert_sentence)
+                    # print('convert_sentence')
+                    # print(convert_sentence)
                     if forward_candidate in quantity_set:
                         if t == 'real':
                             decimal = float(s) / servings * multiplier
@@ -529,44 +534,71 @@ def convert_instructions(data: Dict, servings: int, multiplier: int,
                                 decimal = int(decimal)
                                 convert_sentence += str(decimal)
                             else:
-                                decimal = float(decimal)
+                                decimal = round(float(decimal), 1)
                                 convert_sentence += str(decimal)
                         elif t == 'fraction':
+                            print('forward/fraction/convert_sentence/before')
                             decimal = Fraction(s) / servings * multiplier
+                            decimal = decimal.limit_denominator(5)
                             convert_sentence += str(decimal)
+                            print('forward/fraction/convert_sentence/after')
+                            print(convert_sentence)
                         convert_flg = True
                         break
                     try:
                         que = forward[-i]
-                        print('que')
-                        print(que)
-                        print('forward_candidate')
-                        print(forward_candidate)
+                        # print('que')
+                        # print(que)
+                        # print('forward_candidate')
+                        # print(forward_candidate)
                         forward_candidate = que + forward_candidate
-                        print('forward_candidate')
-                        print(forward_candidate)
+                        # print('forward_candidate')
+                        # print(forward_candidate)
                         
                     except IndexError:
                         pass
-                if decimal_flg:
+                if convert_flg:
                     pass
                 else:
                     backward_candidate = ''
                     for i in range(quantity_length - 1):
                         # print(i)
                         if backward_candidate in quantity_set:
+                            print('if backward_candidate/convert_sentence')
+                            print(convert_sentence)
                             if t == 'real':
+                                print('real')
                                 decimal = float(s) / servings * multiplier
                                 if decimal.is_integer():
                                     decimal = int(decimal)
+                                    print('int/decimal')
+                                    print(decimal)
                                     convert_sentence += str(decimal)
+                                    print('int/convert_sentence')
+                                    print(convert_sentence)
                                 else:
-                                    decimal = float(decimal)
+                                    decimal = round(float(decimal), 1)
+                                    print('float/decimal')
+                                    print(decimal)
                                     convert_sentence += str(decimal)
+                                    print('float/convert_sentence')
+                                    print(convert_sentence)
                             elif t == 'fraction':
+                                print('fraction')
+                                print('fraction/convert_sentence')
+                                print(convert_sentence)
                                 decimal = Fraction(s) / servings * multiplier
+                                decimal = decimal.limit_denominator(5)
+                                print('fraction/decimal')
+                                print(decimal)
+                                print('fraction/convert_sentence/before')
+                                print(convert_sentence)
                                 convert_sentence += str(decimal)
+                                print('fraction/convert_sentence/after')
+                                print(convert_sentence)
+                            print('convert_flg = True')
                             convert_flg = True
+                            print('break')
                             break
                         try:
                             que = backward[i]
@@ -578,15 +610,18 @@ def convert_instructions(data: Dict, servings: int, multiplier: int,
                         except IndexError:
                             pass
                     if not convert_flg:
+                        print('if not convert_flg')
                         convert_sentence += s
+                        print('conmupte_multiply/convert_sentence')
+                        print(convert_sentence)
             else:
                 convert_sentence += s
+                print('conmupte_multiply/convert_sentence')
+                print(convert_sentence)
         print('compute_multiply/convert_sentence')
         print(convert_sentence)
             
         return convert_sentence
-
-        
     
     instructions = fetch_instruction(data)
     print('instructions')

@@ -202,6 +202,12 @@ def main():
 
     # src_path = './test_data/betterhome_recipe/10100006.json'
     # dst_path = './dest/10100006.json'
+
+    # src_path = './test_data/betterhome_recipe/11400111.json'
+    # dst_path = './dest/11400111.json'
+        
+    # src_path = './test_data/betterhome_recipe/11600046.json'
+    # dst_path = './dest/11600046.json'
     
         print(load_json(src_path))
         
@@ -214,7 +220,7 @@ def main():
             print(ingredients_4)
         except ValueError:
             print('Value Error')
-            # continue
+            continue
         
         # ---- #
         # dish #
@@ -234,6 +240,7 @@ def main():
         instruction = instruction_builder.build()
         
         servings = load_json(src_path)
+        # servings = int(servings['ingredients']['食材'].split('人')[0])
         try:
             servings = int(servings['ingredients']['食材'].split('人')[0])
             print('servings : ', servings)
