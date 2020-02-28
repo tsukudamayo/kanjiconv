@@ -1,0 +1,307 @@
+{
+    "recipeId": null,
+    "title": "ディップ３種",
+    "kana": "",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "6人",
+    "introductoryEssay": "",
+    "content": {
+        "dishServings": [
+            {
+                "unit": "2人",
+                "dishes": [
+                    {
+                        "title": "ディップ３種",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "137",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "カッテージチーズ（クリームタイプ）",
+                                "quantityText": "０．３箱（８３．３ｇ）"
+                            },
+                            {
+                                "description": "くるみディップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "くるみ",
+                                        "quantityText": "２個（５ｇ）"
+                                    },
+                                    {
+                                        "description": "レーズン",
+                                        "quantityText": "１０ｇ"
+                                    },
+                                    {
+                                        "description": "牛乳",
+                                        "quantityText": "大さじ１／３"
+                                    },
+                                    {
+                                        "description": "レモン汁",
+                                        "quantityText": "小さじ１／３"
+                                    },
+                                    {
+                                        "description": "ブランデー",
+                                        "quantityText": "小さじ１／３"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "めんたいディップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "からしめんたいこ",
+                                        "quantityText": "１６．７ｇ"
+                                    },
+                                    {
+                                        "description": "レモン汁",
+                                        "quantityText": "大さじ１／２"
+                                    },
+                                    {
+                                        "description": "たまねぎ",
+                                        "quantityText": "１０ｇ"
+                                    },
+                                    {
+                                        "description": "マヨネーズ",
+                                        "quantityText": "大さじ２／３"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "しらすディップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "しらす干し",
+                                        "quantityText": "１０ｇ"
+                                    },
+                                    {
+                                        "description": "いりごま（白）",
+                                        "quantityText": "大さじ１／３"
+                                    },
+                                    {
+                                        "description": "しその葉",
+                                        "quantityText": "１．７枚"
+                                    },
+                                    {
+                                        "description": "牛乳",
+                                        "quantityText": "大さじ１／３"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "少々"
+                                    },
+                                    {
+                                        "description": "こしょう",
+                                        "quantityText": "少々"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "unit": "4人",
+                "dishes": [
+                    {
+                        "title": "ディップ３種",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "137",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "カッテージチーズ（クリームタイプ）",
+                                "quantityText": "０．７箱（１６６．７ｇ）"
+                            },
+                            {
+                                "description": "くるみディップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "くるみ",
+                                        "quantityText": "４個（１０ｇ）"
+                                    },
+                                    {
+                                        "description": "レーズン",
+                                        "quantityText": "２０ｇ"
+                                    },
+                                    {
+                                        "description": "牛乳",
+                                        "quantityText": "大さじ２／３"
+                                    },
+                                    {
+                                        "description": "レモン汁",
+                                        "quantityText": "小さじ２／３"
+                                    },
+                                    {
+                                        "description": "ブランデー",
+                                        "quantityText": "小さじ２／３"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "めんたいディップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "からしめんたいこ",
+                                        "quantityText": "３３．３ｇ"
+                                    },
+                                    {
+                                        "description": "レモン汁",
+                                        "quantityText": "大さじ１／２"
+                                    },
+                                    {
+                                        "description": "たまねぎ",
+                                        "quantityText": "２０ｇ"
+                                    },
+                                    {
+                                        "description": "マヨネーズ",
+                                        "quantityText": "大さじ４／３"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "しらすディップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "しらす干し",
+                                        "quantityText": "２０ｇ"
+                                    },
+                                    {
+                                        "description": "いりごま（白）",
+                                        "quantityText": "大さじ２／３"
+                                    },
+                                    {
+                                        "description": "しその葉",
+                                        "quantityText": "３．３枚"
+                                    },
+                                    {
+                                        "description": "牛乳",
+                                        "quantityText": "大さじ２／３"
+                                    },
+                                    {
+                                        "description": "塩",
+                                        "quantityText": "少々"
+                                    },
+                                    {
+                                        "description": "こしょう",
+                                        "quantityText": "少々"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "instructionServings": [
+            {
+                "unit": "2人",
+                "instructions": [
+                    {
+                        "step": 1,
+                        "description": "〈くるみディップ〉"
+                    },
+                    {
+                        "step": 2,
+                        "description": "くるみは１５０度のオーブンで約７分焼くか、弱火にかけたフライパンでから焼きし、あらみじんに切ります。"
+                    },
+                    {
+                        "step": 3,
+                        "description": "レーズンはぬるま湯で洗い、あらみじんに切ります。"
+                    },
+                    {
+                        "step": 4,
+                        "description": "チーズ１／３箱（約２６．７ｇ）と材料全部を混ぜ合わせます。"
+                    },
+                    {
+                        "step": 5,
+                        "description": "〈めんたいディップ〉"
+                    },
+                    {
+                        "step": 6,
+                        "description": "めんたいこは薄皮を除き、レモン汁を混ぜます。たまねぎはみじん切りにして水にさらし、水気をしぼります。"
+                    },
+                    {
+                        "step": 7,
+                        "description": "チーズ１／３箱（約２６．７ｇ）と材料全部を混ぜ合わせます。"
+                    },
+                    {
+                        "step": 8,
+                        "description": "〈しらすディップ〉"
+                    },
+                    {
+                        "step": 9,
+                        "description": "しらすは熱湯をかけます。ごまはあらく切ります。しそは細切りにして水にさらし、水気をしぼります。"
+                    },
+                    {
+                        "step": 10,
+                        "description": "チーズ１／３箱（約２６．７ｇ）と材料全部を混ぜ合わせます。牛乳の量は、やわらかさによって加減します。"
+                    }
+                ]
+            },
+            {
+                "unit": "4人",
+                "instructions": [
+                    {
+                        "step": 1,
+                        "description": "〈くるみディップ〉"
+                    },
+                    {
+                        "step": 2,
+                        "description": "くるみは１５０度のオーブンで約７分焼くか、弱火にかけたフライパンでから焼きし、あらみじんに切ります。"
+                    },
+                    {
+                        "step": 3,
+                        "description": "レーズンはぬるま湯で洗い、あらみじんに切ります。"
+                    },
+                    {
+                        "step": 4,
+                        "description": "チーズ１／３箱（約５３．３ｇ）と材料全部を混ぜ合わせます。"
+                    },
+                    {
+                        "step": 5,
+                        "description": "〈めんたいディップ〉"
+                    },
+                    {
+                        "step": 6,
+                        "description": "めんたいこは薄皮を除き、レモン汁を混ぜます。たまねぎはみじん切りにして水にさらし、水気をしぼります。"
+                    },
+                    {
+                        "step": 7,
+                        "description": "チーズ１／３箱（約５３．３ｇ）と材料全部を混ぜ合わせます。"
+                    },
+                    {
+                        "step": 8,
+                        "description": "〈しらすディップ〉"
+                    },
+                    {
+                        "step": 9,
+                        "description": "しらすは熱湯をかけます。ごまはあらく切ります。しそは細切りにして水にさらし、水気をしぼります。"
+                    },
+                    {
+                        "step": 10,
+                        "description": "チーズ１／３箱（約５３．３ｇ）と材料全部を混ぜ合わせます。牛乳の量は、やわらかさによって加減します。"
+                    }
+                ]
+            }
+        ]
+    }
+}

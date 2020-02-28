@@ -228,7 +228,7 @@ def operation_by_type(types: str, strings: str, division: Any) -> Any:
 def define_input_type(strings: str) -> str:
     print('strings')
     print(strings)
-    symbol_pattern = re.compile('[()~、。]')
+    symbol_pattern = re.compile('[!"#$%&\'\\\\()*+,-./:;<=>?@[\\]^_`{|}~「」〔〕“”〈〉『』【】＆＊・（）＄＃＠。、？！｀＋￥％《》]')
     kanji_pattern = regex.compile(r'\p{Script=Han}+')
     symbol = re.search(symbol_pattern, strings)
     kanji = kanji_pattern.search(strings)

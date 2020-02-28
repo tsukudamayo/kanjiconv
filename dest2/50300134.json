@@ -1,0 +1,255 @@
+{
+    "recipeId": null,
+    "title": "シャーベット３種",
+    "kana": "",
+    "description": "",
+    "dishType": "main",
+    "defaultServing": "8人",
+    "introductoryEssay": "",
+    "content": {
+        "dishServings": [
+            {
+                "unit": "2人",
+                "dishes": [
+                    {
+                        "title": "シャーベット３種",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "120",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "《しょうがシャーベット》",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "ゼラチン",
+                                        "quantityText": "小さじ１／２"
+                                    },
+                                    {
+                                        "description": "水",
+                                        "quantityText": "大さじ１／４"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "シロップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "２０ｇ"
+                                    },
+                                    {
+                                        "description": "水",
+                                        "quantityText": "カップ１／４"
+                                    },
+                                    {
+                                        "description": "レモン汁",
+                                        "quantityText": "大さじ１／２"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "《ミントシャーベット》",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "ゼラチン",
+                                        "quantityText": "小さじ１／２"
+                                    },
+                                    {
+                                        "description": "水",
+                                        "quantityText": "大さじ１／４"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "《マンゴーとバナナのシャーベット》",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "マンゴー",
+                                        "quantityText": "５０ｇ"
+                                    },
+                                    {
+                                        "description": "バナナ",
+                                        "quantityText": "０．２本"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "unit": "4人",
+                "dishes": [
+                    {
+                        "title": "シャーベット３種",
+                        "cookingTool": "",
+                        "nutrition": {
+                            "note": "",
+                            "salt": 0,
+                            "protein": 0,
+                            "calory": "120",
+                            "lipid": 0,
+                            "carbohydrate": 0
+                        },
+                        "ingredients": [
+                            {
+                                "description": "《しょうがシャーベット》",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "ゼラチン",
+                                        "quantityText": "小さじ１／２"
+                                    },
+                                    {
+                                        "description": "水",
+                                        "quantityText": "大さじ１／２"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "シロップ",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "砂糖",
+                                        "quantityText": "４０ｇ"
+                                    },
+                                    {
+                                        "description": "水",
+                                        "quantityText": "カップ１／２"
+                                    },
+                                    {
+                                        "description": "レモン汁",
+                                        "quantityText": "大さじ１"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "《ミントシャーベット》",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "ゼラチン",
+                                        "quantityText": "小さじ１／２"
+                                    },
+                                    {
+                                        "description": "水",
+                                        "quantityText": "大さじ１／２"
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "《マンゴーとバナナのシャーベット》",
+                                "quantityText": null,
+                                "items": [
+                                    {
+                                        "description": "マンゴー",
+                                        "quantityText": "１００ｇ"
+                                    },
+                                    {
+                                        "description": "バナナ",
+                                        "quantityText": "０．５本"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "instructionServings": [
+            {
+                "unit": "2人",
+                "instructions": [
+                    {
+                        "step": 1,
+                        "description": "《しょうがシャーベット・ミントのシャーベット》"
+                    },
+                    {
+                        "step": 2,
+                        "description": "ゼラチンは分量の水にふり入れ、１５分以上おきます。"
+                    },
+                    {
+                        "step": 3,
+                        "description": "水に砂糖を煮溶かし、シロップを作ります。火からおろして（２）を加え、完全に溶かしてさまします。"
+                    },
+                    {
+                        "step": 4,
+                        "description": "しょうが汁、またはレモン汁とミントのみじん切りを、（３）に混ぜ、冷凍庫で２～３時間冷やし固めます。まわりが固まってきたらフォークで全体をかき混ぜ、再び冷凍庫に入れます。２～３回くり返します。"
+                    },
+                    {
+                        "step": 5,
+                        "description": "《マンゴーとバナナのシャーベット》"
+                    },
+                    {
+                        "step": 6,
+                        "description": "水に砂糖を煮溶かしてシロップを作り、さまします。"
+                    },
+                    {
+                        "step": 7,
+                        "description": "マンゴーは果肉をくり抜き、約１／６量を５ｍｍ角に切って、残りはざく切りにします。バナナはひと口大にします。"
+                    },
+                    {
+                        "step": 8,
+                        "description": "クッキングカッターで角切りマンゴー以外の（７）をペースト状にします。"
+                    },
+                    {
+                        "step": 9,
+                        "description": "（６）（８）、角切りマンゴー、レモン汁を合わせ、しょうが・ミントと同様に冷凍します。"
+                    }
+                ]
+            },
+            {
+                "unit": "4人",
+                "instructions": [
+                    {
+                        "step": 1,
+                        "description": "《しょうがシャーベット・ミントのシャーベット》"
+                    },
+                    {
+                        "step": 2,
+                        "description": "ゼラチンは分量の水にふり入れ、１５分以上おきます。"
+                    },
+                    {
+                        "step": 3,
+                        "description": "水に砂糖を煮溶かし、シロップを作ります。火からおろして（２）を加え、完全に溶かしてさまします。"
+                    },
+                    {
+                        "step": 4,
+                        "description": "しょうが汁、またはレモン汁とミントのみじん切りを、（３）に混ぜ、冷凍庫で２～３時間冷やし固めます。まわりが固まってきたらフォークで全体をかき混ぜ、再び冷凍庫に入れます。２～３回くり返します。"
+                    },
+                    {
+                        "step": 5,
+                        "description": "《マンゴーとバナナのシャーベット》"
+                    },
+                    {
+                        "step": 6,
+                        "description": "水に砂糖を煮溶かしてシロップを作り、さまします。"
+                    },
+                    {
+                        "step": 7,
+                        "description": "マンゴーは果肉をくり抜き、約１／６量を５ｍｍ角に切って、残りはざく切りにします。バナナはひと口大にします。"
+                    },
+                    {
+                        "step": 8,
+                        "description": "クッキングカッターで角切りマンゴー以外の（７）をペースト状にします。"
+                    },
+                    {
+                        "step": 9,
+                        "description": "（６）（８）、角切りマンゴー、レモン汁を合わせ、しょうが・ミントと同様に冷凍します。"
+                    }
+                ]
+            }
+        ]
+    }
+}

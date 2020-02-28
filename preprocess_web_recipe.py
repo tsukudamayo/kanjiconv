@@ -196,21 +196,27 @@ def main():
 
     # import time
     # time0 = time.time()
-    # # src_path = './test_data/betterhome_recipe/12300010.json'
+    # src_path = './test_data/betterhome_recipe/12300010.json'
     # src_path = './test_data/betterhome_recipe/30800031.json'
     # dst_path = './dest/30800031.json'
-
+    
     # src_path = './test_data/betterhome_recipe/10100006.json'
     # dst_path = './dest/10100006.json'
-
+    
     # src_path = './test_data/betterhome_recipe/11400111.json'
     # dst_path = './dest/11400111.json'
         
     # src_path = './test_data/betterhome_recipe/11600046.json'
     # dst_path = './dest/11600046.json'
     
-        print(load_json(src_path))
+    # src_path = './test_data/betterhome_recipe/50300125.json'
+    # dst_path = './dest/50300125.json'
+
+    # src_path = './test_data/betterhome_recipe/50300134.json'
+    # dst_path = './dest/x50300134.json'
         
+        print(load_json(src_path))
+            
         try:
             ingredients_2 = convert_servings(load_json(src_path), 2)
             ingredients_4 = convert_servings(load_json(src_path), 4)
@@ -240,12 +246,12 @@ def main():
         instruction = instruction_builder.build()
         
         servings = load_json(src_path)
-        # servings = int(servings['ingredients']['食材'].split('人')[0])
-        try:
-            servings = int(servings['ingredients']['食材'].split('人')[0])
-            print('servings : ', servings)
-        except ValueError:
-            continue
+        servings = int(servings['ingredients']['食材'].split('人')[0])
+        # try:
+        #     servings = int(servings['ingredients']['食材'].split('人')[0])
+        #     print('servings : ', servings)
+        # except ValueError:
+        #     continue
         
         ####### XXX ####### ####### XXX ####### ####### XXX #######
         if servings == 4:
