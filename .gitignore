@@ -5,3 +5,4 @@ kytea*
 __pycache__/
 test_data/
 dest/
+.mypy_cache/*

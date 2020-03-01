@@ -25,7 +25,7 @@
                         "ingredients": [
                             {
                                 "description": "かぶ",
-                                "quantityText": "中４個（３５０ｇ）"
+                                "quantityText": "中4個(350g)"
                             },
                             {
                                 "description": "Ａ",
@@ -33,21 +33,21 @@
                                 "items": [
                                     {
                                         "description": "だし",
-                                        "quantityText": "カップ１／２"
+                                        "quantityText": "カップ1/2"
                                     },
                                     {
                                         "description": "砂糖",
-                                        "quantityText": "小さじ１／２と１／２"
+                                        "quantityText": "小さじ1/2と1/2"
                                     },
                                     {
                                         "description": "しょうゆ",
-                                        "quantityText": "大さじ１"
+                                        "quantityText": "大さじ1"
                                     }
                                 ]
                             },
                             {
                                 "description": "とりひき肉",
-                                "quantityText": "７５ｇ"
+                                "quantityText": "75g"
                             },
                             {
                                 "description": "Ｂ",
@@ -55,29 +55,29 @@
                                 "items": [
                                     {
                                         "description": "酒",
-                                        "quantityText": "大さじ１／２"
+                                        "quantityText": "大さじ1/2"
                                     },
                                     {
                                         "description": "しょうゆ",
-                                        "quantityText": "大さじ１／２"
+                                        "quantityText": "大さじ1/2"
                                     },
                                     {
                                         "description": "砂糖",
-                                        "quantityText": "小さじ１／２"
+                                        "quantityText": "小さじ1/2"
                                     },
                                     {
                                         "description": "しょうが汁",
-                                        "quantityText": "小さじ１／２"
+                                        "quantityText": "小さじ1/2"
                                     }
                                 ]
                             },
                             {
                                 "description": "しょうが",
-                                "quantityText": "０．５かけ"
+                                "quantityText": "0.5かけ"
                             },
                             {
                                 "description": "かたくり粉",
-                                "quantityText": "大さじ１／２"
+                                "quantityText": "大さじ1/2"
                             }
                         ]
                     }
@@ -100,7 +100,7 @@
                         "ingredients": [
                             {
                                 "description": "かぶ",
-                                "quantityText": "中８個（７００ｇ）"
+                                "quantityText": "中8個(700g)"
                             },
                             {
                                 "description": "Ａ",
@@ -122,7 +122,7 @@
                             },
                             {
                                 "description": "とりひき肉",
-                                "quantityText": "１５０ｇ"
+                                "quantityText": "150g"
                             },
                             {
                                 "description": "Ｂ",
@@ -148,11 +148,11 @@
                             },
                             {
                                 "description": "しょうが",
-                                "quantityText": "１かけ"
+                                "quantityText": "1かけ"
                             },
                             {
                                 "description": "かたくり粉",
-                                "quantityText": "大さじ１／２"
+                                "quantityText": "大さじ1/2"
                             }
                         ]
                     }

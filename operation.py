@@ -19,6 +19,12 @@ _KYTEA_PATH = 'kytea'
 # parse ingredints #
 # ---------------- #
 def parse_ingredients(data: Dict) -> List:
+    print('parse_ingredients/data')
+    print(data)
+    # XXX 0 means no intention
+    data = list(dict_to_hankaku(data))[0]
+    print('parse_ingredients/data')
+    print(data)
     key_value_list = [{k: v} for k, v in data.items()]
     generator = [list(divide_key_value(d)) for d in key_value_list]
     
@@ -167,10 +173,10 @@ class Multiplier:
         match = re.search(null_pattern, value)
         if match:
             return None
+
+        # zenkaku = jaconv.h2z(value, kana=True, digit=True, ascii=True)
     
-        zenkaku = jaconv.h2z(value, kana=True, digit=True, ascii=True)
-    
-        return zenkaku
+        return value
 
 
 def multiply_dish(norm, dish, servings, default_servings):
